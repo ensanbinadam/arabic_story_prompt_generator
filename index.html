@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>حكاية — مولّد القصص المصوّرة التعليمية</title>
+<meta name="description" content="مولّد عربي مستقل للقصص المصورة التعليمية: شخصيات ثابتة، محرر صفحات، طلب كتابة القصة وبرومبتات الصور والحفظ والاستيراد.">
+<style>
+:root{--ink:#183743;--muted:#5b737b;--teal:#126e6b;--teal-light:#e5f3ed;--sand:#fff8e9;--paper:#fff;--line:#dce6df;--bg:#f5f7f2;--gold:#c68431;--danger:#a83242;--radius:18px;--shadow:0 12px 34px #1837430a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo","Tajawal",Tahoma,Arial,sans-serif;font-size:15px;line-height:1.7}button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);padding:9px 15px;font-weight:700;transition:background .15s,border-color .15s}button:hover{background:#eff6f1;border-color:#b0c9bd}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d4ad62;outline-offset:2px}button:disabled{opacity:.45;cursor:default}button.primary{background:var(--teal);border-color:var(--teal);color:#fff}button.primary:hover{background:#0a5553}button.danger{color:var(--danger)}button.small{padding:5px 10px;font-size:12px}button.flat{background:transparent}a{color:var(--teal)}[hidden]{display:none!important}.app{max-width:1540px;margin:auto;padding:24px}.hero{background:var(--ink);color:#fff;border-radius:24px;padding:28px 32px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:20px}.hero::after{content:"";width:220px;height:220px;position:absolute;left:-65px;top:-80px;border:35px solid #77aaa629;border-radius:50%;pointer-events:none}.eyebrow{font-size:12px;letter-spacing:.03em;color:#b9ddd3;display:flex;gap:12px;align-items:center}.dot{width:7px;height:7px;background:#d9ae62;border-radius:50%;display:inline-block}.hero h1{margin:6px 0;font-size:31px;line-height:1.5;font-weight:800}.hero p{color:#d0e1db;margin:0;font-size:14px;max-width:700px}.hero-mark{flex-shrink:0;width:102px;position:relative;z-index:1}.hero-mark svg{display:block;width:100%}.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}.actions .status{margin-inline-start:auto;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:20px;align-items:start}.workspace,.output{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);min-width:0}.workspace{overflow:hidden}.nav{display:flex;overflow:auto;gap:5px;padding:14px;border-bottom:1px solid var(--line);background:#fbfcf9;scrollbar-width:thin}.nav button{white-space:nowrap;font-size:13px;padding:8px 12px;background:transparent;border-color:transparent}.nav button[aria-selected=true]{background:var(--teal-light);color:var(--teal);border-color:#cce2d5}.nav .step{font-size:11px;display:inline-flex;width:19px;height:19px;align-items:center;justify-content:center;border-radius:50%;background:#e9eee6;margin-inline-end:4px}.panel{padding:24px;min-height:650px}.panel h2{font-size:21px;margin:0 0 4px}.caption{color:var(--muted);font-size:13px;margin:0 0 20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{min-width:0}.field.full{grid-column:1/-1}.field>label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}.field input:not([type=checkbox]),.field select,.field textarea{width:100%;border:1px solid #d4ded6;border-radius:10px;background:#fbfcf9;color:var(--ink);padding:10px 12px;line-height:1.7;direction:rtl;text-align:right}.field textarea{resize:vertical;min-height:94px}.field input[type=number]{direction:ltr;text-align:right}.hint{display:block;font-size:11px;color:var(--muted);margin-top:4px;line-height:1.8}.check{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:12px;background:#fafcf8}.check input{width:17px;height:17px;accent-color:var(--teal)}.check label{flex:1}.subhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:24px 0 12px}.subhead h3{margin:0;font-size:16px}.card-stack{display:grid;gap:13px}.editor-card{border:1px solid var(--line);background:#fff;border-radius:14px;padding:17px;position:relative}.card-top{display:flex;align-items:center;gap:9px;margin-bottom:12px}.badge{font-size:11px;background:var(--teal-light);color:var(--teal);padding:3px 9px;border-radius:20px;white-space:nowrap}.card-top strong{font-size:14px;flex:1;min-width:0;overflow-wrap:anywhere}.card-tools{display:flex;gap:4px;flex-wrap:wrap}.editor-card .form-grid{gap:12px}.editor-card textarea{min-height:76px}.editor-card details{margin-top:12px}.editor-card summary{color:var(--teal);font-weight:700;font-size:12px;cursor:pointer}.editor-card details .form-grid{margin-top:13px}.note{background:var(--sand);border:1px solid #ecd9b6;border-radius:12px;padding:12px 15px;font-size:12px;color:#77552c;margin:15px 0}.note.teal{background:#f0f8f2;border-color:#d0e6d6;color:#315d49}.legacy{margin-top:20px;border-top:1px dashed var(--line);padding-top:14px}.legacy summary{font-size:13px;cursor:pointer;color:var(--teal);font-weight:700}.legacy textarea{margin:12px 0;width:100%;min-height:160px;border:1px solid var(--line);border-radius:10px;padding:12px;direction:rtl}.output{position:sticky;top:16px;overflow:hidden}.output-head{padding:20px 20px 14px;border-bottom:1px solid var(--line)}.output-head h2{margin:0;font-size:18px}.output-head p{font-size:12px;color:var(--muted);margin:4px 0}.progress-row{display:flex;justify-content:space-between;font-size:11px;margin-top:13px}.progress{height:5px;background:#e7eee7;border-radius:20px;margin-top:6px;overflow:hidden}.progress span{display:block;height:100%;background:var(--teal);transition:width .2s}.output-tabs{display:flex;gap:4px;flex-wrap:wrap;padding:12px 15px;border-bottom:1px solid var(--line)}.output-tabs button{font-size:11px;padding:6px 9px;border-color:transparent;background:#f5f7f2}.output-tabs button[aria-selected=true]{background:var(--teal);color:#fff}.output-body{padding:15px}.output-toolbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.output-toolbar button{font-size:12px;padding:7px 10px}.output-text{width:100%;border:1px solid var(--line);background:#fafcf8;border-radius:12px;min-height:310px;height:43vh;max-height:580px;resize:vertical;padding:13px;white-space:pre-wrap;line-height:1.8;font-size:12px;direction:rtl;text-align:right;color:var(--ink)}.output-text.json{direction:ltr;text-align:left;font-family:monospace}.mini-select{width:100%;border:1px solid var(--line);border-radius:9px;padding:7px 9px;background:#fff;margin-bottom:9px}.review{margin:0;padding:0;list-style:none}.review li{font-size:11px;border-bottom:1px solid #eef1e9;padding:6px 0;display:flex;gap:7px}.review li:last-child{border:0}.review .ok{color:#19704a}.review .warn{color:#a26d27}.preview-footer{white-space:pre-wrap;border:1px dashed #becdbd;border-radius:10px;padding:15px;font-size:13px;margin-top:17px;background:#fbfcf9}.library-list{display:grid;gap:9px;margin:14px 0}.library-row{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px;font-size:13px}.library-row input{accent-color:var(--teal)}.library-row span{flex:1;overflow-wrap:anywhere}.empty{padding:24px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed #c9d7cb;border-radius:12px;background:#fafbf7}.import-area{width:100%;min-height:230px;resize:vertical;border:1px solid var(--line);border-radius:12px;padding:12px;direction:rtl}.switch-row{display:flex;align-items:center;gap:8px;font-size:12px;margin-bottom:13px}.switch-row input{accent-color:var(--teal)}dialog{border:1px solid var(--line);border-radius:20px;padding:24px;width:min(720px,92vw);max-height:90vh;overflow:auto;color:var(--ink);box-shadow:0 24px 90px #001c2c33;direction:rtl}dialog::backdrop{background:#12283188}dialog h2{font-size:20px;margin:0 0 12px}.dialog-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.dialog-input{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:30;background:var(--ink);color:#fff;border-radius:12px;padding:12px 20px;box-shadow:0 5px 20px #0002;font-size:13px;max-width:92vw;pointer-events:none}.page-foot{font-size:11px;color:var(--muted);text-align:center;margin:24px 0 10px}.file-hidden{display:none}.section-tools{display:flex;gap:7px;flex-wrap:wrap}.guide-list{padding-inline-start:22px;font-size:13px}.guide-list li{margin:9px 0}.output-body details{margin-top:14px}.output-body summary{cursor:pointer;font-size:12px;color:var(--muted)}.preset-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.preset-btn{text-align:right;padding:18px;background:#f6f9f1}.preset-btn span{display:block;font-size:12px;color:var(--muted);font-weight:400}.archive-note{font-size:11px;color:var(--muted)}.chars-hint{font-size:11px;margin-top:6px;color:var(--muted)}@media(min-width:1400px){.layout{grid-template-columns:minmax(0,1fr) 435px}.output-text{height:48vh}}@media(max-width:1080px){.layout{grid-template-columns:minmax(0,1fr) 345px}.app{padding:16px}.panel{padding:18px}.hero h1{font-size:26px}.hero{padding:24px}.nav button{padding:7px 9px}.hero-mark{width:80px}}@media(max-width:850px){.layout{grid-template-columns:1fr}.output{position:static}.output-text{height:300px}.panel{min-height:0}.hero-mark{display:none}.actions .status{width:100%;margin:2px 0}.hero h1{font-size:25px}.app{padding:10px}.hero{border-radius:18px;padding:22px}.workspace,.output{border-radius:15px}}@media(max-width:540px){.form-grid,.preset-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero h1{font-size:22px}.hero p{font-size:12px}.panel{padding:16px}.actions button{font-size:12px;padding:8px 10px}.card-top{flex-wrap:wrap}.card-tools{width:100%;justify-content:flex-end}.editor-card{padding:13px}.subhead{align-items:flex-start;flex-wrap:wrap}}@media print{body{background:white}.hero,.actions,.nav,.output,.page-foot{display:none}.app{padding:0}.layout{display:block}.workspace{border:0;box-shadow:none}.panel[hidden]{display:block!important}.panel{min-height:0;break-inside:avoid}.card-tools,.section-tools{display:none}.editor-card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="app">
+ <header class="hero"><div><div class="eyebrow"><span class="dot"></span>قصص عربية • تعلّم بالاكتشاف</div><h1>حكاية <span style="font-weight:400;font-size:.65em">| مولّد القصص المصوّرة</span></h1><p>من فكرة تعليمية إلى حكاية متصلة، وشخصيات ثابتة، وبرومبت واضح لكل صفحة.</p></div><div class="hero-mark" aria-hidden="true"><svg viewBox="0 0 110 110" fill="none"><rect x="2" y="2" width="106" height="106" rx="25" fill="#ffffff0b"/><path d="M55 31c-11-9-23-9-36-3v49c14-6 25-5 36 4 11-9 22-10 36-4V28c-13-6-25-6-36 3Z" fill="#fbf3dc"/><path d="M55 32v48M28 38c7-2 12-1 18 2m-18 9c7-2 12-1 18 2m-18 9c7-2 12-1 18 2" stroke="#335b5b" stroke-width="2.5" stroke-linecap="round"/><circle cx="73" cy="47" r="7" fill="#d9ad62"/><path d="m63 69 8-10 6 6 6-9" stroke="#40776b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></header>
+ <div class="actions"><button class="primary" id="generateBtn">تحديث البرومبتات</button><button id="exampleBtn">قصص جاهزة للتجربة</button><button id="importAiBtn">استيراد رد الذكاء</button><button id="saveBtn">حفظ المشروع</button><button id="exportBtn">تنزيل المشروع</button><button id="newBtn" class="flat">قصة جديدة</button><button id="helpBtn" class="flat">طريقة الاستخدام</button><span id="statusText" class="status" role="status">جاهز للعمل</span></div>
+ <div class="layout"><section class="workspace" aria-label="محرّر القصة"><nav class="nav" id="editorNav" role="tablist" aria-label="أقسام إعداد القصة"></nav><div id="panels"></div></section>
+ <aside class="output" aria-label="برومبتات القصة"><div class="output-head"><h2>القصة جاهزة للخطوة التالية</h2><p id="projectMeta">ابدأ بعنوان وفكرة، أو اختر قصة للتجربة.</p><div class="progress-row"><span>اكتمال عناصر المشروع</span><strong id="scoreText">٠٪</strong></div><div class="progress"><span id="scoreBar" style="width:0"></span></div></div>
+ <nav class="output-tabs" role="tablist" aria-label="نوع الناتج"><button data-output="request" role="tab" aria-selected="true">طلب كتابة القصة</button><button data-output="main" role="tab" aria-selected="false">برومبت الصور</button><button data-output="page" role="tab" aria-selected="false">صفحة مستقلة</button><button data-output="negative" role="tab" aria-selected="false">الممنوعات</button><button data-output="json" role="tab" aria-selected="false">المشروع JSON</button></nav>
+ <div class="output-body"><label class="switch-row" id="jsonRequestRow"><input type="checkbox" id="requestJsonOutput">طلب نسخة JSON مع رد الذكاء</label><select id="pageOutputSelect" class="mini-select" aria-label="اختر الصفحة المطلوبة" hidden></select><div class="output-toolbar"><button id="copyOutputBtn" class="primary">نسخ الناتج</button><button id="downloadOutputBtn">تنزيل النص</button><button id="downloadAllBtn">حزمة البرومبتات</button></div><textarea id="outputText" class="output-text" readonly aria-label="نص البرومبت الناتج" spellcheck="false"></textarea><span class="hint" id="outputHint"></span><details open><summary>مراجعة عناصر القصة</summary><ul class="review" id="reviewList"></ul></details></div></aside></div>
+ <footer class="page-foot">حكاية — إصدار ١.١ • مستخلص من مولّد البرومبت العربي، وموسّع للقصص التعليمية • يعمل بملف واحد</footer>
+</main>
+<dialog id="appDialog"><h2 id="dialogTitle"></h2><div id="dialogBody"></div><div class="dialog-actions" id="dialogActions"></div></dialog>
+<input type="file" id="projectFile" class="file-hidden" accept=".json,application/json"><input type="file" id="libraryFile" class="file-hidden" accept=".json,application/json">
+<div id="toast" class="toast" role="status" hidden></div>
+<script>
+'use strict';
+const GROUPS = [{"id": "basics", "title": "فكرة القصة", "short": "الفكرة", "caption": "ابدأ بالعنوان والفكرة، ثم حدّد عدد الصفحات وطريقة إخراجها.", "fields": [{"id": "title", "label": "عنوان القصة", "type": "text", "default": "", "placeholder": "مثال: سرّ الحظيرة الفارغة", "full": true}, {"id": "subject", "label": "الفكرة أو موضوع القصة", "type": "textarea", "default": "", "full": true, "placeholder": "ما الذي تريد أن يتعلّمه الطفل؟ ما الموقف الذي تبدأ منه الحكاية؟"}, {"id": "storySourceMode", "label": "طريقة إعداد المحتوى", "type": "select", "default": "plan", "options": [["plan", "تطوير فكرة إلى قصة جديدة"], ["exact", "الالتزام بقصة أو نص مُدخل حرفيًا"]]}, {"id": "requireFullTashkeel", "label": "تشكيل النصوص بالحركات للقراءة", "type": "checkbox", "default": false, "hint": "فعّل الخيار قبل نسخ طلب كتابة القصة لطلب التشكيل الكامل للعناوين والسرد والحوار. إلغاء الخيار يجعل التشكيل اختياريًا ويحفظ الحركات الموجودة.", "full": true}, {"id": "purpose", "label": "غرض القصة", "type": "select", "default": "تعليمي", "options": [["تعليمي", "تعليمي"], ["تربوي وقيمي", "تربوي وقيمي"], ["تنمية القراءة واللغة", "تنمية القراءة واللغة"], ["توعية", "توعية"], ["ترفيهي معرفي", "ترفيهي معرفي"], ["توثيق تجربة تعليمية", "توثيق تجربة تعليمية"]]}, {"id": "storyPageCount", "label": "عدد صفحات القصة", "type": "number", "default": 6, "min": 1, "max": 40, "hint": "حتى ٤٠ صفحة في المشروع. الغلاف مستقل، وتُولّد الصور في دفعات حتى ١٠ صور."}, {"id": "storyPageSize", "label": "مقاس كل صفحة", "type": "select", "default": "A4 عرضي", "options": [["A4 عرضي", "A4 عرضي"], ["A4 عمودي", "A4 عمودي"], ["16:9 عرضي", "16:9 عرضي"], ["4:5 عمودي", "4:5 عمودي"], ["مربع 1:1", "مربع 1:1"], ["A5 عمودي", "A5 عمودي"], ["9:16 عمودي", "9:16 عمودي"]]}, {"id": "storyCoverMode", "label": "غلاف مستقل", "type": "select", "default": "on", "options": [["off", "بدون غلاف مستقل"], ["on", "أنشئ غلافًا مستقلًا قبل الصفحات"]]}, {"id": "storyCoverSubtitle", "label": "العبارة أسفل عنوان الغلاف", "type": "text", "default": "", "placeholder": "تُترك فارغة إذا لم تحتج إليها"}, {"id": "backCoverMode", "label": "غلاف خلفي", "type": "select", "default": "off", "options": [["off", "بدون غلاف خلفي"], ["on", "غلاف خلفي مستقل"]]}, {"id": "backCoverText", "label": "النص الحرفي للغلاف الخلفي", "type": "textarea", "default": "", "full": true}, {"id": "numberStyle", "label": "نمط الأرقام", "type": "select", "default": "eastern", "options": [["english", "أرقام إنجليزية 0-9"], ["eastern", "أرقام هندية شرقية ٠-٩"], ["auto", "تلقائي حسب السياق"]]}, {"id": "outputMode", "label": "تفصيل البرومبت", "type": "select", "default": "medium", "options": [["full", "موسع جدًا"], ["medium", "متوازن - موصى به"], ["short", "مختصر قوي"]]}, {"id": "visualPromptMode", "label": "لغة الوصف الفني", "type": "select", "default": "arabicOnly", "options": [["hybrid", "مختلط احترافي: إنجليزي للتصميم وعربي للنصوص"], ["englishVisual", "إنجليزي بصري + قواعد عربية"], ["arabicOnly", "عربي كامل"]]}, {"id": "designMode", "label": "طريقة العمل", "type": "select", "default": "designFromScratch", "options": [["designFromScratch", "تصميم جديد من الصفر"], ["editExistingImage", "تعديل صورة موجودة فقط"]]}, {"id": "qualityLevel", "label": "جودة الإخراج", "type": "select", "default": "عالية جدًا", "options": [["عالية جدًا", "عالية جدًا"], ["عالية", "عالية"], ["متوازنة", "متوازنة"]]}, {"id": "outputTarget", "label": "نطاق برومبت الصور", "type": "select", "default": "all", "options": [["all", "القصة كاملة — تُنفّذ على دفعات"], ["batch", "دفعة محددة من الصفحات"], ["cover", "الغلاف الأمامي فقط"], ["back", "الغلاف الخلفي فقط"]]}, {"id": "batchStart", "label": "بداية الدفعة", "type": "number", "default": 1, "min": 1, "max": 40}, {"id": "batchSize", "label": "عدد الصفحات في الدفعة", "type": "number", "default": 6, "min": 1, "max": 10}]}, {"id": "education", "title": "البناء التعليمي", "short": "التعليم", "caption": "حدّد مستوى القارئ والمهارة المقصودة لتخدم الحكاية هدفًا واضحًا.", "fields": [{"id": "subjectArea", "label": "المادة الدراسية", "type": "select", "default": "عام", "options": [["عام", "عام"], ["رياضيات", "رياضيات"], ["علوم", "علوم"], ["لغة عربية", "لغة عربية"], ["لغة إنجليزية", "لغة إنجليزية"], ["دراسات اجتماعية", "دراسات اجتماعية"], ["فيزياء", "فيزياء"], ["كيمياء", "كيمياء"], ["أحياء", "أحياء"], ["هندسة", "هندسة"], ["حاسب آلي", "حاسب آلي"], ["تربية إسلامية", "تربية إسلامية"]]}, {"id": "gradeLevel", "label": "المرحلة أو الصف", "type": "text", "default": "", "placeholder": "مثال: رياض الأطفال — المستوى الثالث"}, {"id": "audienceType", "label": "الفئة المستهدفة", "type": "select", "default": "أطفال الروضة", "options": [["أطفال الروضة", "أطفال الروضة"], ["عام", "عام"], ["طلاب المدرسة", "طلاب المدرسة"], ["طلاب المرحلة الابتدائية", "طلاب المرحلة الابتدائية"], ["طلاب المرحلة المتوسطة", "طلاب المرحلة المتوسطة"], ["طلاب المرحلة الثانوية", "طلاب المرحلة الثانوية"], ["معلمون", "معلمون"], ["المعلمون، مديرو المدارس، المشرفون التربويون", "المعلمون، مديرو المدارس، المشرفون التربويون"], ["أولياء الأمور", "أولياء الأمور"]]}, {"id": "ageRange", "label": "العمر المناسب", "type": "text", "default": "", "placeholder": "مثال: ٥–٦ سنوات"}, {"id": "lessonTitle", "label": "عنوان الدرس", "type": "text", "default": ""}, {"id": "readingLevel", "label": "مستوى القراءة", "type": "select", "default": "قراءة بمساندة المعلم", "options": [["قراءة بمساندة المعلم", "قراءة بمساندة المعلم"], ["قارئ مبتدئ", "قارئ مبتدئ"], ["قارئ مستقل", "قارئ مستقل"], ["متقدم", "متقدم"]]}, {"id": "learningGoal", "label": "الهدف التعليمي أو الرسالة", "type": "textarea", "default": "", "full": true, "placeholder": "هدف محدد يمكن ملاحظته بعد قراءة القصة"}, {"id": "storyGenre", "label": "نوع الحكاية", "type": "select", "default": "قصة استكشافية", "options": [["قصة استكشافية", "قصة استكشافية"], ["مغامرة تعليمية", "مغامرة تعليمية"], ["موقف من الحياة اليومية", "موقف من الحياة اليومية"], ["حوار وسؤال وجواب", "حوار وسؤال وجواب"], ["قصة علمية", "قصة علمية"], ["قصة رياضية", "قصة رياضية"], ["قصة قيم وسلوك", "قصة قيم وسلوك"], ["خيال تعليمي", "خيال تعليمي"], ["قصة تاريخية موثقة", "قصة تاريخية موثقة"]]}, {"id": "storyStructure", "label": "بناء الأحداث", "type": "select", "default": "تمهيد ← سؤال أو مشكلة ← محاولات ← اكتشاف ← تطبيق ← خاتمة", "options": [["تمهيد ← سؤال أو مشكلة ← محاولات ← اكتشاف ← تطبيق ← خاتمة", "تمهيد ← سؤال أو مشكلة ← محاولات ← اكتشاف ← تطبيق ← خاتمة"], ["بداية ← وسط ← نهاية", "بداية ← وسط ← نهاية"], ["توقّع ← استكشاف ← تفسير ← تطبيق", "توقّع ← استكشاف ← تفسير ← تطبيق"], ["رحلة متدرجة بين محطات", "رحلة متدرجة بين محطات"], ["مقارنة بين موقفين ونتيجتيهما", "مقارنة بين موقفين ونتيجتيهما"], ["بناء مخصص", "بناء مخصص"]]}, {"id": "customStructure", "label": "البناء المخصص للأحداث", "type": "textarea", "default": "", "full": true}, {"id": "learningApproach", "label": "طريقة التعلّم", "type": "select", "default": "استكشاف وتوقّع", "options": [["استكشاف وتوقّع", "استكشاف وتوقّع"], ["حل مشكلة", "حل مشكلة"], ["حوار وتفكير", "حوار وتفكير"], ["ملاحظة وتصنيف", "ملاحظة وتصنيف"], ["عدّ ومقارنة", "عدّ ومقارنة"], ["تجربة آمنة", "تجربة آمنة"], ["تعلّم بالقيم والمواقف", "تعلّم بالقيم والمواقف"], ["تعلّم متعدد الحواس", "تعلّم متعدد الحواس"]]}, {"id": "interactionMode", "label": "مشاركة القارئ", "type": "select", "default": "none", "options": [["none", "بدون أسئلة داخل القصة"], ["oral", "أسئلة شفوية للمعلّم — خارج الصور"], ["inPage", "سؤال تفاعلي قصير داخل الصفحات"], ["end", "تقويم في الصفحة الأخيرة"]]}, {"id": "maxWords", "label": "الحد المستهدف للكلمات في الصفحة", "type": "number", "default": 45, "min": 5, "max": 200}, {"id": "readingDuration", "label": "زمن القراءة التقريبي", "type": "text", "default": "", "placeholder": "مثال: ٧ دقائق"}, {"id": "targetVocabulary", "label": "المفردات المستهدفة", "type": "textarea", "default": ""}, {"id": "valueFocus", "label": "القيم والمهارات الحياتية", "type": "textarea", "default": ""}, {"id": "misconceptions", "label": "مفاهيم خاطئة ينبغي معالجتها", "type": "textarea", "default": ""}, {"id": "assessment", "label": "أسئلة التقويم أو ملاحظات المعلم", "type": "textarea", "default": ""}, {"id": "referenceText", "label": "نص أو مصدر مرجعي — لا يظهر تلقائيًا في الصور", "type": "textarea", "default": "", "full": true, "hint": "انقل النص المعتمد هنا. لا يستنتج المولد معلومات من عنوان المصدر أو رابطه وحده."}, {"id": "sourceCitation", "label": "بيانات المصدر المعتمد", "type": "text", "default": "", "full": true, "placeholder": "اسم المصدر، الصفحة أو الرابط عند الحاجة"}, {"id": "cultureSetting", "label": "السياق الثقافي", "type": "select", "default": "سعودي معاصر", "options": [["سعودي معاصر", "سعودي معاصر"], ["عربي معاصر", "عربي معاصر"], ["عربي عام", "عربي عام"], ["مكان وزمان يحدده المستخدم", "مكان وزمان يحدده المستخدم"]]}, {"id": "accessibilityNotes", "label": "تيسير القراءة والفروق الفردية", "type": "textarea", "default": "", "full": true, "placeholder": "مثال: جمل قصيرة، تفاصيل بصرية قليلة، وتباين مرتفع"}]}, {"id": "characters", "title": "الشخصيات الثابتة", "short": "الشخصيات", "caption": "أنشئ بطاقة ثابتة لكل شخصية. تظهر أوصافها نفسها في كل برومبت.", "fields": [{"id": "storyConsistency", "label": "درجة تثبيت الشخصيات", "type": "select", "default": "صارم جدًا: حافظ على نفس الشخصيات والملابس والألوان في كل الصفحات", "options": [["صارم جدًا: حافظ على نفس الشخصيات والملابس والألوان في كل الصفحات", "صارم جدًا: حافظ على نفس الشخصيات والملابس والألوان في كل الصفحات"], ["صارم: حافظ على نفس الشخصيات مع مرونة بسيطة في الوضعيات", "صارم: حافظ على نفس الشخصيات مع مرونة بسيطة في الوضعيات"], ["مرن: حافظ على الملامح الأساسية فقط", "مرن: حافظ على الملامح الأساسية فقط"]]}, {"id": "storyCharacters", "label": "وصف إضافي للشخصيات أو وصف مستورد من المولد الأصلي", "type": "textarea", "default": "", "full": true}, {"id": "referenceMode", "label": "استخدام المراجع البصرية", "type": "select", "default": "description", "options": [["description", "الاعتماد على الأوصاف التفصيلية"], ["attached", "الالتزام بصور الشخصيات التي تُرفق مع الطلب"], ["firstPage", "اعتماد أول صفحة مرجعًا للصفحات التالية"]]}, {"id": "continuityNotes", "label": "ثوابت إضافية بين الصفحات", "type": "textarea", "default": "", "full": true, "placeholder": "الأماكن، الأدوات، ألوان الملابس، أو العلاقات بين الشخصيات"}]}, {"id": "pages", "title": "مشاهد القصة", "short": "الصفحات", "caption": "كل بطاقة تمثل صفحة مستقلة. افصل وصف الصورة عن النص الذي سيظهر داخلها.", "fields": [{"id": "storyTextPlacement", "label": "موضع نص القصة", "type": "select", "default": "فقاعات حوار عربية داخل المشهد", "options": [["فقاعات حوار عربية داخل المشهد", "فقاعات حوار عربية داخل المشهد"], ["نص سردي أسفل الصورة", "نص سردي أسفل الصورة"], ["نص سردي أعلى يمين الصفحة", "نص سردي أعلى يمين الصفحة"], ["نص في عمود يمين الصفحة", "نص في عمود يمين الصفحة"], ["نص في عمود يسار الصفحة", "نص في عمود يسار الصفحة"], ["بطاقة نصية أسفل يمين الصورة", "بطاقة نصية أسفل يمين الصورة"], ["بدون نص داخل الصورة، اترك مساحة للنص", "بدون نص داخل الصورة، اترك مساحة للنص"]]}, {"id": "panelLayout", "label": "توزيع اللقطات داخل الصفحة", "type": "select", "default": "single", "options": [["single", "مشهد واحد في كل صفحة"], ["two", "لقطتان من اليمين إلى اليسار"], ["three", "ثلاث لقطات من اليمين إلى اليسار"], ["four", "أربع لقطات — شبكة عربية"], ["custom", "توزيع مختلف تحدده كل صفحة"]]}, {"id": "narratorStyle", "label": "صوت الراوي", "type": "select", "default": "راوٍ خارجي بسيط", "options": [["راوٍ خارجي بسيط", "راوٍ خارجي بسيط"], ["الشخصية تحكي بضمير المتكلم", "الشخصية تحكي بضمير المتكلم"], ["حوار بين الشخصيات", "حوار بين الشخصيات"], ["سرد وحوار متوازن", "سرد وحوار متوازن"], ["بدون راوٍ", "بدون راوٍ"]]}, {"id": "dialogueDensity", "label": "كثافة الحوار", "type": "select", "default": "قليل وقصير", "options": [["قليل وقصير", "قليل وقصير"], ["متوازن", "متوازن"], ["حوار فقط", "حوار فقط"], ["بدون حوار", "بدون حوار"]]}, {"id": "arabicText", "label": "نص حرفي عام للقصة أو نص إضافي — يظهر فقط إذا حُدد موضعه", "type": "textarea", "default": "", "full": true}, {"id": "secondaryText", "label": "نص ثانوي حرفي اختياري", "type": "textarea", "default": "", "full": true}]}, {"id": "visual", "title": "الهوية البصرية", "short": "الرسم", "caption": "حدّد الأسلوب العام مرة واحدة، ثم خصّص زاوية كل مشهد عند الحاجة.", "fields": [{"id": "style", "label": "النمط الفني العام", "type": "text", "default": "أنيق وحديث واحترافي", "full": true, "placeholder": "مثال: رسوم تعليمية واضحة، أو تكوين ورقي مجسّم"}, {"id": "storyArtStyle", "label": "أسلوب رسم القصة", "type": "select", "default": "رسوم قصص أطفال عربية ناعمة وواضحة", "options": [["رسوم قصص أطفال عربية ناعمة وواضحة", "رسوم قصص أطفال عربية ناعمة وواضحة"], ["أسلوب كرتوني تعليمي نظيف", "أسلوب كرتوني تعليمي نظيف"], ["رسم شبه واقعي لطيف", "رسم شبه واقعي لطيف"], ["أسلوب كتاب مصور فاخر", "أسلوب كتاب مصور فاخر"], ["أسلوب مانجا/كوميكس عربي منظم", "أسلوب مانجا/كوميكس عربي منظم"], ["ألوان مائية لطيفة", "ألوان مائية لطيفة"], ["قصاصات ورقية وطبقات مجسمة", "قصاصات ورقية وطبقات مجسمة"], ["رسوم ثلاثية الأبعاد تعليمية", "رسوم ثلاثية الأبعاد تعليمية"], ["رسوم خطية بالأبيض والأسود للتلوين", "رسوم خطية بالأبيض والأسود للتلوين"], ["شخصيات ظل بلا وجوه", "شخصيات ظل بلا وجوه"], ["أسلوب رسم مخصص", "أسلوب رسم مخصص"]]}, {"id": "artStyleCustom", "label": "تفاصيل الأسلوب المخصص", "type": "textarea", "default": "", "full": true}, {"id": "colors", "label": "الألوان والجو البصري", "type": "textarea", "default": "", "full": true}, {"id": "lighting", "label": "الإضاءة", "type": "select", "default": "تلقائي حسب نوع التصميم", "options": [["تلقائي حسب نوع التصميم", "تلقائي حسب نوع التصميم"], ["بلا", "بلا"], ["إضاءة ناعمة ومتوازنة", "إضاءة ناعمة ومتوازنة"], ["إضاءة استوديو واضحة", "إضاءة استوديو واضحة"], ["إضاءة سينمائية درامية", "إضاءة سينمائية درامية"], ["إضاءة نهارية مشرقة", "إضاءة نهارية مشرقة"], ["إضاءة خافتة راقية", "إضاءة خافتة راقية"], ["وصف مخصص", "وصف مخصص"]]}, {"id": "lightingCustom", "label": "الإضاءة المخصصة", "type": "textarea", "default": ""}, {"id": "cameraAngle", "label": "زاوية المشهد", "type": "select", "default": "تلقائي حسب نوع التصميم", "options": [["تلقائي حسب نوع التصميم", "تلقائي حسب نوع التصميم"], ["بلا", "بلا"], ["مباشرة وواضحة", "مباشرة وواضحة"], ["منظور ثلاثي الأبعاد", "منظور ثلاثي الأبعاد"], ["زاوية علوية خفيفة", "زاوية علوية خفيفة"], ["زاوية أمامية رسمية", "زاوية أمامية رسمية"], ["منظور ديناميكي", "منظور ديناميكي"], ["وصف مخصص", "وصف مخصص"]]}, {"id": "cameraAngleCustom", "label": "زاوية المشهد المخصصة", "type": "textarea", "default": ""}, {"id": "backgroundStyle", "label": "الخلفية", "type": "select", "default": "تلقائي حسب نوع التصميم", "options": [["تلقائي حسب نوع التصميم", "تلقائي حسب نوع التصميم"], ["بلا", "بلا"], ["نظيفة وغير مزدحمة", "نظيفة وغير مزدحمة"], ["تعليمية منظمة", "تعليمية منظمة"], ["فاخرة وهادئة", "فاخرة وهادئة"], ["معاصرة بسيطة", "معاصرة بسيطة"], ["تفصيلية لكنها متوازنة", "تفصيلية لكنها متوازنة"], ["وصف مخصص", "وصف مخصص"]]}, {"id": "backgroundStyleCustom", "label": "الخلفية المخصصة", "type": "textarea", "default": ""}, {"id": "mainElementPosition", "label": "موضع العنصر الرئيسي", "type": "select", "default": "تلقائي حسب نوع التصميم", "options": [["تلقائي حسب نوع التصميم", "تلقائي حسب نوع التصميم"], ["بلا", "بلا"], ["يمين الصورة من منظور المشاهد", "يمين الصورة من منظور المشاهد"], ["يسار الصورة من منظور المشاهد", "يسار الصورة من منظور المشاهد"], ["وسط الصورة من منظور المشاهد", "وسط الصورة من منظور المشاهد"], ["وصف مخصص", "وصف مخصص"]]}, {"id": "mainElementPositionCustom", "label": "الموضع المخصص", "type": "textarea", "default": ""}, {"id": "sceneDesc", "label": "وصف المكان والبيئة العامة", "type": "textarea", "default": "", "full": true}, {"id": "extraElements", "label": "عناصر إضافية ثابتة", "type": "textarea", "default": "", "full": true}, {"id": "layoutType", "label": "التوزيع العام", "type": "select", "default": "تلقائي حسب نوع التصميم", "options": [["تلقائي حسب نوع التصميم", "تلقائي حسب نوع التصميم"], ["بلا", "بلا"], ["تخطيط عربي مرن حسب المحتوى", "تخطيط عربي مرن حسب المحتوى"], ["عنوان أعلى يمين مع مساحة قراءة واسعة", "عنوان أعلى يمين مع مساحة قراءة واسعة"], ["بطاقات تعليمية مرتبة من اليمين إلى اليسار", "بطاقات تعليمية مرتبة من اليمين إلى اليسار"], ["مخطط تعليمي عربي منظم", "مخطط تعليمي عربي منظم"], ["تصميم إعلاني عربي بعنوان بارز", "تصميم إعلاني عربي بعنوان بارز"], ["منشور سوشيال عربي عالي الوضوح", "منشور سوشيال عربي عالي الوضوح"], ["أصل نصي خطي مستقل قابل للإدراج", "أصل نصي خطي مستقل قابل للإدراج"], ["قصة مصورة عربية متعددة الصفحات", "قصة مصورة عربية متعددة الصفحات"], ["توزيع كوميكس عربي RTL", "توزيع كوميكس عربي RTL"]]}, {"id": "safeMargin", "label": "الهوامش الآمنة", "type": "text", "default": "٨ مم على الأقل"}, {"id": "printMode", "label": "الطباعة", "type": "select", "default": "ملون", "options": [["ملون", "ملون"], ["أبيض وأسود بتباين مرتفع", "أبيض وأسود بتباين مرتفع"], ["نسخة رقمية للشاشة", "نسخة رقمية للشاشة"]]}, {"id": "resolution", "label": "الدقة المستهدفة", "type": "text", "default": "٣٠٠ نقطة لكل بوصة للطباعة"}, {"id": "negativeNotes", "label": "ممنوعات خاصة", "type": "textarea", "default": "", "full": true}, {"id": "specialInstructions", "label": "تعليمات إضافية دقيقة", "type": "textarea", "default": "", "full": true}]}, {"id": "arabic", "title": "النص العربي", "short": "العربية", "caption": "النص داخل الصور مستقل عن توجيهات الرسم. استخدم //إرشاد// أو [[إرشاد]] دون طباعتها.", "fields": [{"id": "fontStyle", "label": "نوع الخط العربي", "type": "select", "default": "تلقائي مناسب للتصميم", "options": [["تلقائي مناسب للتصميم", "تلقائي مناسب للتصميم"], ["بلا", "بلا"], ["خط نسخي واضح", "خط نسخي واضح"], ["خط ثلث فخم", "خط ثلث فخم"], ["خط كوفي أنيق", "خط كوفي أنيق"], ["خط ديواني جلي فاخر", "خط ديواني جلي فاخر"], ["خط ثلث احتفالي أصيل", "خط ثلث احتفالي أصيل"], ["خط عربي حديث وواضح", "خط عربي حديث وواضح"], ["خط دعائي عريض", "خط دعائي عريض"], ["خط مخطوط احترافي", "خط مخطوط احترافي"], ["Cairo للعناوين والنصوص الواضحة", "Cairo للعناوين والنصوص الواضحة"], ["Tajawal للواجهات التعليمية الحديثة", "Tajawal للواجهات التعليمية الحديثة"], ["Noto Kufi Arabic للعناوين والبطاقات", "Noto Kufi Arabic للعناوين والبطاقات"], ["Noto Naskh Arabic للنصوص الطويلة والقراءة", "Noto Naskh Arabic للنصوص الطويلة والقراءة"], ["Amiri للشعر والتراث والمخطوطات", "Amiri للشعر والتراث والمخطوطات"], ["Readex Pro للإنفوجرافيك والشرائح", "Readex Pro للإنفوجرافيك والشرائح"], ["IBM Plex Sans Arabic للجداول والتقارير", "IBM Plex Sans Arabic للجداول والتقارير"], ["Almarai للتصميم التعليمي الهادئ", "Almarai للتصميم التعليمي الهادئ"], ["Reem Kufi للعناوين الزخرفية المعتدلة", "Reem Kufi للعناوين الزخرفية المعتدلة"], ["وصف مخصص", "وصف مخصص"]]}, {"id": "fontStyleCustom", "label": "الخط المخصص", "type": "textarea", "default": ""}, {"id": "textImportance", "label": "أهمية النص", "type": "select", "default": "أولوية قصوى جدًا", "options": [["أولوية قصوى جدًا", "أولوية قصوى جدًا"], ["أولوية قصوى", "أولوية قصوى"], ["متوازن مع العناصر", "متوازن مع العناصر"]]}, {"id": "textPosition", "label": "موضع النص الأساسي", "type": "select", "default": "تلقائي حسب نوع التصميم", "options": [["تلقائي حسب نوع التصميم", "تلقائي حسب نوع التصميم"], ["بلا", "بلا"], ["أعلى يمين الصورة", "أعلى يمين الصورة"], ["أعلى وسط الصورة", "أعلى وسط الصورة"], ["أعلى يسار الصورة", "أعلى يسار الصورة"], ["وسط يمين الصورة", "وسط يمين الصورة"], ["وسط الصورة", "وسط الصورة"], ["وسط يسار الصورة", "وسط يسار الصورة"], ["أسفل يمين الصورة", "أسفل يمين الصورة"], ["أسفل وسط الصورة", "أسفل وسط الصورة"], ["أسفل يسار الصورة", "أسفل يسار الصورة"], ["وصف مخصص", "وصف مخصص"]]}, {"id": "textPositionCustom", "label": "موضع النص المخصص", "type": "textarea", "default": ""}, {"id": "textFormatting", "label": "تعليمات تنسيق النص", "type": "textarea", "default": "", "full": true}, {"id": "tashkeelMode", "label": "تفاصيل التشكيل", "type": "select", "default": "auto", "options": [["auto", "اختياري — دون إلزام بالتشكيل الكامل"], ["full", "تشكيل كامل للنصوص المقروءة — يفعّل مربع الاختيار"], ["preserve", "حفظ التشكيل المُدخل فقط"], ["key", "تشكيل الكلمات المستهدفة في النص الجديد"], ["none", "بدون تشكيل إضافي"]]}, {"id": "strictArabic", "label": "تدقيق اللغة العربية بدقة", "type": "checkbox", "default": true}, {"id": "keepTashkeel", "label": "حفظ التشكيل الموجود حرفيًا", "type": "checkbox", "default": true}, {"id": "rtl", "label": "قراءة وترتيب عربي من اليمين إلى اليسار", "type": "checkbox", "default": true}, {"id": "viewerPerspective", "label": "تحديد المواقع من منظور المشاهد", "type": "checkbox", "default": true}, {"id": "noMirror", "label": "منع عكس الحروف أو النصوص", "type": "checkbox", "default": true}, {"id": "noFakeArabic", "label": "منع الحروف الوهمية", "type": "checkbox", "default": true}, {"id": "noSplitWords", "label": "منع كسر الكلمات بين السطور", "type": "checkbox", "default": true}, {"id": "blankIfFail", "label": "ترك مساحة فارغة عند تعذّر كتابة النص بدقة", "type": "checkbox", "default": true}, {"id": "highReadability", "label": "أولوية الوضوح وسهولة القراءة", "type": "checkbox", "default": true}, {"id": "consistentDigits", "label": "توحيد نمط الأرقام", "type": "checkbox", "default": true}, {"id": "includeNegativePrompt", "label": "تضمين قائمة الممنوعات", "type": "checkbox", "default": true}, {"id": "preserveProvidedText", "label": "حفظ النصوص التي أدخلها المستخدم حرفيًا", "type": "checkbox", "default": true}, {"id": "protectSacredText", "label": "حماية الآيات والأحاديث والنصوص المنقولة", "type": "checkbox", "default": true}, {"id": "protectContactNumbers", "label": "حماية أرقام التواصل من التغيير", "type": "checkbox", "default": true}, {"id": "childAppropriate", "label": "ملاءمة المحتوى للفئة العمرية", "type": "checkbox", "default": true}, {"id": "autosave", "label": "حفظ تلقائي داخل المتصفح", "type": "checkbox", "default": true}]}, {"id": "footer", "title": "الغلاف والتذييل", "short": "التذييل", "caption": "أضف اسم المنفذ أو الجهة، وحدد صفحات ظهور التذييل دون تكراره في السرد.", "fields": [{"id": "enableFooter", "label": "تفعيل التذييل", "type": "select", "default": "no", "options": [["yes", "مفعّل"], ["no", "غير مفعّل"]]}, {"id": "footerMode", "label": "طريقة كتابة التذييل", "type": "select", "default": "auto", "options": [["auto", "توليد تلقائي من البيانات"], ["manual", "نص يدوي كامل"], ["mixed", "دمج البيانات مع النص اليدوي"]]}, {"id": "footerTeacherName", "label": "اسم المنفذ أو المعلم", "type": "text", "default": ""}, {"id": "footerDate", "label": "التاريخ", "type": "text", "default": ""}, {"id": "footerLessonTopic", "label": "موضوع التذييل", "type": "text", "default": ""}, {"id": "footerPosition", "label": "موضع التذييل", "type": "select", "default": "أسفل يمين الصورة", "options": [["أسفل يمين الصورة", "أسفل يمين الصورة"], ["أسفل وسط الصورة", "أسفل وسط الصورة"], ["أسفل يسار الصورة", "أسفل يسار الصورة"], ["شريط سفلي ممتد", "شريط سفلي ممتد"]]}, {"id": "footerStyle", "label": "أسلوب التذييل", "type": "select", "default": "أنيق وخفيف وغير مزعج", "options": [["أنيق وخفيف وغير مزعج", "أنيق وخفيف وغير مزعج"], ["رسمي ومنظم", "رسمي ومنظم"], ["تعليمي واضح داخل شريط سفلي", "تعليمي واضح داخل شريط سفلي"], ["هادئ وصغير الحجم", "هادئ وصغير الحجم"]]}, {"id": "footerSize", "label": "حجم التذييل", "type": "select", "default": "صغير جدًا وغير مزاحم", "options": [["صغير جدًا وغير مزاحم", "صغير جدًا وغير مزاحم"], ["صغير واضح", "صغير واضح"], ["متوسط واضح", "متوسط واضح"], ["أصغر حجم ممكن مع بقاء القراءة", "أصغر حجم ممكن مع بقاء القراءة"]]}, {"id": "footerLayout", "label": "تركيب التذييل", "type": "select", "default": "سطر واحد مفصول بشرطات عمودية", "options": [["سطر واحد مفصول بشرطات عمودية", "سطر واحد مفصول بشرطات عمودية"], ["سطر واحد مفصول بشرطات قصيرة", "سطر واحد مفصول بشرطات قصيرة"], ["سطران متوازنان", "سطران متوازنان"], ["بطاقة صغيرة في الأسفل", "بطاقة صغيرة في الأسفل"]]}, {"id": "footerText", "label": "نص التذييل الحرفي", "type": "textarea", "default": "", "full": true}, {"id": "footerScope", "label": "صفحات ظهور التذييل", "type": "select", "default": "all", "options": [["all", "الغلاف وكل الصفحات"], ["pages", "صفحات القصة فقط"], ["cover", "الغلاف الأمامي فقط"], ["last", "الصفحة الأخيرة فقط"]]}, {"id": "publisher", "label": "الجهة التعليمية أو المشروع", "type": "text", "default": "", "full": true}, {"id": "pageNumbers", "label": "ترقيم الصفحات", "type": "select", "default": "yes", "options": [["yes", "رقم صغير واضح أسفل الصفحة"], ["no", "بدون أرقام داخل الصور"]]}, {"id": "coverScene", "label": "فكرة مشهد الغلاف", "type": "text", "default": "", "full": true}]}];
+// Shared Arabic, numeral, directive, footer and story-placement helpers extracted from the approved original.
+      function clean(v) {
+        return (v || "").trim();
+      }
+      function escapeHtml(value) {
+        return String(value || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+      function easternToEnglish(text) {
+        const map = {
+          "٠": "0",
+          "١": "1",
+          "٢": "2",
+          "٣": "3",
+          "٤": "4",
+          "٥": "5",
+          "٦": "6",
+          "٧": "7",
+          "٨": "8",
+          "٩": "9",
+        };
+        return text.replace(/[٠-٩]/gu, (d) => map[d] || d);
+      }
+      function englishToEastern(text) {
+        const map = {
+          0: "٠",
+          1: "١",
+          2: "٢",
+          3: "٣",
+          4: "٤",
+          5: "٥",
+          6: "٦",
+          7: "٧",
+          8: "٨",
+          9: "٩",
+        };
+        return text.replace(/[0-9]/gu, (d) => map[d] || d);
+      }
+      function normalizeSpaces(text) {
+        return text
+          .replace(/[\u200B\u200C\u200D\uFEFF]/g, "")
+          .replace(/[\u00A0\u202F\u2000-\u200A\u205F\u3000]/g, " ")
+          .replace(/[ \t]+/g, " ")
+          .replace(/\s*\n\s*/g, "\n")
+          .replace(/\n{3,}/g, "\n\n")
+          .trim();
+      }
+      function hasArabicDiacritics(text) {
+        return /[\u064B-\u0652\u0670]/.test(text || "");
+      }
+      function scopedGuidanceExcerpt(text) {
+        const visible = normalizeSpaces(
+          String(text || "")
+            .replace(/\[\[([\s\S]*?)\]\]/g, " ")
+            .replace(/\/\/([\s\S]*?)\/\//g, " "),
+        );
+        if (!visible) return "";
+        return visible.length > 180
+          ? visible.slice(0, 180).trim() + "..."
+          : visible;
+      }
+      function splitInlineGuidance(text) {
+        const directives = [];
+        let source = String(text || "");
+        source = source.replace(
+          /\[\[(?!\/\]\])([\s\S]{1,2000}?)\]\]([\s\S]{0,5000}?)\[\[\/\]\]/g,
+          (_, inner, scopedText) => {
+            const directive = normalizeSpaces(inner || "");
+            const excerpt = scopedGuidanceExcerpt(scopedText);
+            if (directive) {
+              directives.push(
+                excerpt
+                  ? `${directive} — يطبّق على النص التالي حتى وسم [[/]]: "${excerpt}"`
+                  : `${directive} — يطبّق على النص التالي حتى وسم [[/]]`,
+              );
+            }
+            return scopedText;
+          },
+        );
+        source = source.replace(
+          /(^|\r?\n)([^\S\r\n]*)\/\/([^\r\n]{1,2000})\/\/[^\S\r\n]*(?=\r?\n|$)/g,
+          (_, lineBreak, _indent, inner) => {
+            const directive = normalizeSpaces(inner || "");
+            if (directive) directives.push(directive);
+            return lineBreak;
+          },
+        );
+        source = source.replace(/\/\/([^\r\n]{1,2000}?)\/\//g, (_, inner) => {
+          const directive = normalizeSpaces(inner || "");
+          if (directive) directives.push(directive);
+          return " ";
+        });
+        const visible = normalizeSpaces(
+          source.replace(/\[\[([\s\S]{1,2000}?)\]\]/g, (_, inner) => {
+            const directive = normalizeSpaces(inner || "");
+            if (directive && directive !== "/") directives.push(directive);
+            return " ";
+          }),
+        );
+        return { visible, directives };
+      }
+      function stripInlineGuidance(text) {
+        return splitInlineGuidance(text).visible;
+      }
+      function normalizeForCompare(text) {
+        return clean(text || "")
+          .replace(/[ً-ْـ]/g, "")
+          .replace(/[^\u0600-\u06FF0-9٠-٩A-Za-z]+/g, "")
+          .toLowerCase();
+      }
+      function clampInt(value, min, max, fallback) {
+        const n = parseInt(easternToEnglish(String(value || "")), 10);
+        if (Number.isNaN(n)) return fallback;
+        return Math.min(max, Math.max(min, n));
+      }
+      function displayNumber(n, style) {
+        return style === "eastern" ? englishToEastern(String(n)) : String(n);
+      }
+      function convertDigitsByStyle(text, style) {
+        if (style === "english") return easternToEnglish(text || "");
+        if (style === "eastern") return englishToEastern(text || "");
+        return text || "";
+      }
+      function composeFooterText(d) {
+        const parts = [];
+        const topic =
+          d._footerLessonTopic ||
+          d.footerLessonTopic ||
+          d._lessonTitle ||
+          d.lessonTitle ||
+          d._subject ||
+          d.subject ||
+          "";
+        const teacher = d._footerTeacherName || d.footerTeacherName || "";
+        const date = convertDigitsByStyle(
+          d._footerDate ?? d.footerDate ?? "",
+          d.numberStyle,
+        );
+        const manual = clean(d._footerText ?? d.footerText ?? "");
+
+        if (d.footerMode === "manual") {
+          return manual;
+        }
+
+        if (topic)
+          parts.push(`الموضوع: ${convertDigitsByStyle(topic, d.numberStyle)}`);
+        if (teacher) parts.push(`المعلم: ${teacher}`);
+        if (date) parts.push(`التاريخ: ${date}`);
+
+        let autoText = "";
+        if (d.footerLayout === "سطر واحد مفصول بشرطات عمودية")
+          autoText = parts.join(" | ");
+        else if (d.footerLayout === "سطر واحد مفصول بشرطات قصيرة")
+          autoText = parts.join(" - ");
+        else if (d.footerLayout === "سطران متوازنان") {
+          if (parts.length <= 2) autoText = parts.join("\n");
+          else
+            autoText =
+              parts.slice(0, 2).join(" | ") + "\n" + parts.slice(2).join(" | ");
+        } else {
+          autoText = parts.join(" | ");
+        }
+
+        if (d.footerMode === "mixed" && manual) {
+          return [manual, autoText].filter(Boolean).join("\n");
+        }
+
+        return autoText || manual;
+      }
+      function footerExactTextInstruction(text) {
+        const footerText = clean(text || "");
+        if (!footerText) return "";
+        const lines = [
+          "انسخ نص التذييل حرفيًا كما هو دون تبديل أي كلمة أو حرف.",
+        ];
+        if (footerText.includes("ملتقى")) {
+          lines.push(
+            'انتبه لكلمة "ملتقى": اكتبها بهذه الحروف تحديدًا "م ل ت ق ى"، ولا تستبدلها بكلمة "ملحق" أو أي كلمة قريبة.',
+          );
+        }
+        return lines.join(" ");
+      }
+      function storyTextPlacementInstruction(placement) {
+        if ((placement || "").includes("فقاعات"))
+          return "استخدم فقاعات حوار عربية واضحة داخل المشهد، واجعل ذيل الفقاعة يشير للشخصية المتحدثة، مع قراءة الفقاعة من اليمين إلى اليسار.";
+        if ((placement || "").includes("أسفل الصورة"))
+          return "ضع النص السردي أسفل الصورة في مساحة مخصصة نظيفة، بمحاذاة يمينية واتجاه RTL.";
+        if ((placement || "").includes("أعلى يمين"))
+          return "ضع النص السردي في أعلى يمين الصفحة داخل مساحة هادئة لا تغطي العناصر المهمة.";
+        if ((placement || "").includes("عمود يمين"))
+          return "ضع النص في عمود واضح على يمين الصفحة، والصورة أو المشهد في المساحة المتبقية، مع محاذاة عربية كاملة.";
+        if ((placement || "").includes("عمود يسار"))
+          return "ضع النص في عمود يسار الصفحة لكن حافظ على محاذاة النص يمينًا داخل العمود، واجعل القراءة عربية RTL.";
+        if ((placement || "").includes("بطاقة نصية"))
+          return "ضع النص داخل بطاقة صغيرة أسفل يمين الصورة، بمحاذاة يمينية وتباين واضح.";
+        if ((placement || "").includes("بدون نص"))
+          return "لا تكتب النص داخل الصورة؛ اترك مساحة نظيفة مخصصة لإضافة النص لاحقًا.";
+        return "ضع نص القصة في موضع واضح ومقروء، بمحاذاة عربية من اليمين إلى اليسار.";
+      }
+const APP_VERSION = 1;
+const STORAGE_KEY = 'hikaya_story_project_v1';
+const LIBRARY_KEY = 'hikaya_story_templates_v1';
+const FIELDS = GROUPS.flatMap(group => group.fields);
+const FIELD_IDS = new Set(FIELDS.map(f => f.id));
+const $ = id => document.getElementById(id);
+const clone = value => JSON.parse(JSON.stringify(value));
+const uid = () => typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : 'item_' + Date.now().toString(36) + Math.random().toString(36).slice(2);
+const defaults = Object.fromEntries(FIELDS.map(f => [f.id, f.default]));
+let state = freshProject();
+let templates = {};
+let outputTab = 'request';
+let activeTab = 'basics';
+let updateTimer, saveTimer, toastTimer;
+let activeOutput = '';
+let dialogResolve = null;
+
+function newPage() { return {id:uid(), title:'', scene:'', narrative:'', dialogue:'', characters:'', learning:'', question:'', panels:'', camera:'', emotion:'', reference:''}; }
+function newCharacter() { return {id:uid(), name:'', role:'', age:'', appearance:'', outfit:'', accessories:'', speech:'', reference:''}; }
+function freshProject() { return {artifact:'arabic-story-project',version:APP_VERSION,settings:clone(defaults),characters:[],pages:Array.from({length:6},newPage),quickPrompt:'',requestJsonOutput:false}; }
+function activePages(project=state) { return project.pages.slice(0,clampInt(project.settings.storyPageCount,1,40,6)); }
+function num(value) { return displayNumber(value,state.settings.numberStyle); }
+function text(value) { return convertDigitsByStyle(stripInlineGuidance(String(value ?? '')),state.settings.numberStyle); }
+function meaningful(value) { return clean(String(value ?? '')) && !/^(تلقائي حسب نوع التصميم|بلا|عام|لا يوجد|غير محدد)$/.test(clean(String(value))); }
+function formatField(f) {
+  const id=f.id, value=state.settings[id];
+  if(f.type==='checkbox') return `<div class="field ${f.full?'full':''}"><div class="check"><input id="${id}" type="checkbox" data-setting="${id}" ${value?'checked':''} ${f.hint?`aria-describedby="${id}-hint"`:''}><label for="${id}">${escapeHtml(f.label)}</label></div>${f.hint?`<span class="hint" id="${id}-hint">${escapeHtml(f.hint)}</span>`:''}</div>`;
+  let control='';
+  if(f.type==='select') control=`<select id="${id}" data-setting="${id}">${f.options.map(([v,l])=>`<option value="${escapeHtml(v)}" ${String(value)===String(v)?'selected':''}>${escapeHtml(l)}</option>`).join('')}</select>`;
+  else if(f.type==='textarea') control=`<textarea id="${id}" data-setting="${id}" placeholder="${escapeHtml(f.placeholder||'')}" spellcheck="false">${escapeHtml(value)}</textarea>`;
+  else control=`<input id="${id}" data-setting="${id}" type="${f.type}" value="${escapeHtml(value)}" ${f.min!==undefined?`min="${f.min}" max="${f.max}"`:''} placeholder="${escapeHtml(f.placeholder||'')}">`;
+  return `<div class="field ${f.full?'full':''}" data-field-wrap="${id}"><label for="${id}">${escapeHtml(f.label)}</label>${control}${f.hint?`<span class="hint">${escapeHtml(f.hint)}</span>`:''}${f.type==='textarea'?`<button class="small flat" type="button" data-directive="${id}" title="إدراج إرشاد لا يُطبع داخل الصورة">إدراج //إرشاد//</button>`:''}</div>`;
+}
+function renderShell() {
+  const nav=[...GROUPS.map(g=>({id:g.id,title:g.short})),{id:'library',title:'قوالبي'}];
+  $('editorNav').innerHTML=nav.map((g,i)=>`<button id="tab-${g.id}" role="tab" data-tab="${g.id}" aria-controls="panel-${g.id}" aria-selected="${g.id===activeTab}" tabindex="${g.id===activeTab?0:-1}"><span class="step">${englishToEastern(String(i+1))}</span>${escapeHtml(g.title)}</button>`).join('');
+  $('panels').innerHTML=GROUPS.map(g=>`<section class="panel" id="panel-${g.id}" role="tabpanel" aria-labelledby="tab-${g.id}" ${g.id===activeTab?'':'hidden'}><h2>${escapeHtml(g.title)}</h2><p class="caption">${escapeHtml(g.caption)}</p><div class="form-grid">${g.fields.map(formatField).join('')}</div>${g.id==='characters'?'<div class="subhead"><h3>بطاقات الشخصيات</h3><button class="small" id="addCharacterBtn">إضافة شخصية</button></div><div id="characterCards" class="card-stack"></div>':''}${g.id==='pages'?'<div class="subhead"><h3>صفحات مرتبة من البداية إلى النهاية</h3><div class="section-tools"><button class="small" id="addPageBtn">إضافة صفحة</button><button class="small" id="downloadPlanBtn">تنزيل مخطط القصة</button></div></div><div id="pageCards" class="card-stack"></div><p id="archiveNote" class="archive-note"></p><details class="legacy"><summary>لصق وصف صفحات من المولد الأصلي أو من نص مكتوب</summary><textarea id="legacyPages" placeholder="الصفحة١: وصف المشهد. النص: النص الظاهر.\nالصفحة٢: وصف المشهد التالي. النص: ..."></textarea><button id="parseLegacyBtn" class="small">تحويل النص إلى بطاقات صفحات</button><span class="hint">تقبل الصفحة١ أو الصفحة ١ أو Page 1. راجع السرد والحوار بعد التحويل.</span></details>':''}${g.id==='footer'?'<div class="preview-footer" id="footerPreview"></div>':''}${g.id==='basics'?'<div class="note teal">ابدأ بالفكرة فقط إن أردت كتابة قصة جديدة، ثم انسخ «طلب كتابة القصة». بعد استيراد الرد يمكنك توليد برومبت لكل صفحة أو لدفعة كاملة.</div>':''}</section>`).join('') + `<section class="panel" id="panel-library" role="tabpanel" aria-labelledby="tab-library" hidden><h2>قوالب القصص والمشاريع</h2><p class="caption">احفظ قصة كاملة لتعود إليها، أو صدّر القوالب لتستخدمها في جهاز آخر.</p><div class="section-tools"><button id="saveTemplateBtn" class="primary">حفظ كقالب</button><button id="importProjectBtn">استيراد مشروع JSON</button><button id="exportLibraryBtn">تصدير القوالب</button><button id="importLibraryBtn">استيراد القوالب</button><button id="exportSelectedBtn">تصدير المحدد</button><button id="deleteSelectedBtn" class="danger">حذف المحدد</button></div><div id="libraryList" class="library-list"></div><div class="note">يمكنك استيراد إعدادات قصة من المولد العربي الأصلي أيضًا. يحتفظ المشروع بإعدادات القصص والخيارات المشتركة المناسبة لها.</div></section>`;
+  renderCharacters(); renderPages(); renderLibrary(); updateVisibility();
+}
+const CHAR_FIELDS=[['name','اسم الشخصية'],['role','الدور في القصة'],['age','العمر أو المرحلة'],['appearance','الملامح والهيئة الثابتة'],['outfit','الملابس وألوانها'],['accessories','الإكسسوارات والأدوات'],['speech','أسلوب الكلام'],['reference','اسم الصورة المرجعية أو وصفها']];
+function renderCharacters() {
+  const target=$('characterCards'); if(!target)return;
+  target.innerHTML=state.characters.length?state.characters.map((c,i)=>`<article class="editor-card" data-char-card="${i}"><div class="card-top"><span class="badge">شخصية ${num(i+1)}</span><strong class="char-title">${escapeHtml(c.name||'شخصية جديدة')}</strong><div class="card-tools"><button class="small danger" data-char-delete="${i}" aria-label="حذف الشخصية ${num(i+1)}">حذف</button></div></div><div class="form-grid">${CHAR_FIELDS.map(([k,l])=>`<div class="field ${['appearance','outfit','reference'].includes(k)?'full':''}"><label for="char-${c.id}-${k}">${l}</label><input id="char-${c.id}-${k}" data-char="${i}" data-char-field="${k}" value="${escapeHtml(c[k])}" placeholder="${k==='reference'?'أرفق الصورة نفسها مع البرومبت في أداة الصور':''}"></div>`).join('')}</div></article>`).join(''):'<div class="empty">لا توجد بطاقات بعد. أضف شخصية، أو استخدم حاوية الوصف الإضافي أعلاه.</div>';
+}
+function pageField(p,i,k,label,type='textarea',full=true) {
+  return `<div class="field ${full?'full':''}"><label for="page-${p.id}-${k}">${label}</label>${type==='textarea'?`<textarea id="page-${p.id}-${k}" data-page="${i}" data-page-field="${k}" spellcheck="false">${escapeHtml(p[k])}</textarea>`:`<input id="page-${p.id}-${k}" data-page="${i}" data-page-field="${k}" value="${escapeHtml(p[k])}">`}</div>`;
+}
+function renderPages() {
+  const target=$('pageCards');if(!target)return;
+  const pages=activePages();
+  target.innerHTML=pages.map((p,i)=>`<article class="editor-card" data-page-card="${i}"><div class="card-top"><span class="badge">الصفحة ${num(i+1)}</span><strong class="page-title">${escapeHtml(p.title||'مشهد جديد')}</strong><div class="card-tools"><button class="small" data-page-up="${i}" ${i===0?'disabled':''} aria-label="نقل الصفحة ${num(i+1)} إلى السابق">↑</button><button class="small" data-page-down="${i}" ${i===pages.length-1?'disabled':''} aria-label="نقل الصفحة ${num(i+1)} إلى التالي">↓</button><button class="small" data-page-copy="${i}">تكرار</button><button class="small" data-page-prompt="${i}">برومبت</button><button class="small danger" data-page-delete="${i}" aria-label="حذف الصفحة ${num(i+1)}">حذف</button></div></div><div class="form-grid">${pageField(p,i,'title','عنوان الصفحة — اختياري','text')}${pageField(p,i,'scene','وصف الصورة والمشهد')}${pageField(p,i,'narrative','السرد الذي يظهر حرفيًا')}${pageField(p,i,'dialogue','الحوار الحرفي — اكتب اسم المتحدث قبل عبارته')}</div><details><summary>تفاصيل المشهد والتعلّم واللقطات</summary><div class="form-grid">${pageField(p,i,'characters','الشخصيات الموجودة في هذه الصفحة','text')}${pageField(p,i,'learning','الفكرة أو المهارة في هذا المشهد','text')}${pageField(p,i,'question','سؤال أو نشاط القارئ')}${pageField(p,i,'panels','تفصيل اللقطات المرقمة داخل هذه الصفحة')}${pageField(p,i,'camera','زاوية خاصة لهذا المشهد','text',false)}${pageField(p,i,'emotion','المشاعر أو الجو العام','text',false)}${pageField(p,i,'reference','صورة أو مكان مرجعي لهذا المشهد','text')}</div></details></article>`).join('');
+  const archived=state.pages.length-pages.length;
+  $('archiveNote').textContent=archived?`توجد ${num(archived)} صفحات إضافية محفوظة خارج العدد الحالي. زد عدد الصفحات لإظهارها.`:'';
+  $('addPageBtn').disabled=pages.length>=40;
+  syncPageSelector();
+}
+function syncPageSelector() {
+  const select=$('pageOutputSelect'),previous=select.value||'0';
+  select.innerHTML=(state.settings.storyCoverMode==='on'?'<option value="cover">الغلاف الأمامي</option>':'')+activePages().map((p,i)=>`<option value="${i}">الصفحة ${num(i+1)}${p.title?' — '+escapeHtml(p.title):''}</option>`).join('')+(state.settings.backCoverMode==='on'?'<option value="back">الغلاف الخلفي</option>':'');
+  if([...select.options].some(o=>o.value===previous))select.value=previous;
+}
+function renderLibrary() {
+  const target=$('libraryList');if(!target)return;
+  const entries=Object.entries(templates);
+  target.innerHTML=entries.length?entries.map(([name,p])=>`<div class="library-row"><input type="checkbox" data-template-check value="${escapeHtml(name)}" aria-label="تحديد ${escapeHtml(name)}"><span>${escapeHtml(name)}<small class="hint">${englishToEastern(String(p.settings.storyPageCount))} صفحات</small></span><button class="small" data-template-load="${escapeHtml(name)}">فتح</button></div>`).join(''):'<div class="empty">قوالبك المحفوظة ستظهر هنا.</div>';
+}
+function activateTab(id,focus=false) {
+  activeTab=id;
+  document.querySelectorAll('[data-tab]').forEach(b=>{const on=b.dataset.tab===id;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1;if(on&&focus)b.focus();});
+  document.querySelectorAll('.panel').forEach(p=>p.hidden=p.id!=='panel-'+id);
+}
+function updateVisibility() {
+  for(const parent of ['lighting','cameraAngle','backgroundStyle','mainElementPosition','fontStyle','textPosition']) {
+    const wrap=document.querySelector(`[data-field-wrap="${parent}Custom"]`);
+    if(wrap)wrap.hidden=!/مخصص/.test(state.settings[parent]);
+  }
+  for(const [id,show] of [['artStyleCustom',/مخصص/.test(state.settings.storyArtStyle)],['customStructure',/مخصص/.test(state.settings.storyStructure)],['storyCoverSubtitle',state.settings.storyCoverMode==='on'],['backCoverText',state.settings.backCoverMode==='on'],['batchStart',state.settings.outputTarget==='batch'],['batchSize',state.settings.outputTarget==='batch']]) {
+    const wrap=document.querySelector(`[data-field-wrap="${id}"]`);if(wrap)wrap.hidden=!show;
+  }
+  if($('footerPreview'))$('footerPreview').textContent=state.settings.enableFooter==='yes'?(composeFooterText(state.settings)||'التذييل مفعّل، لكن نصه لم يُكتب بعد.'):'التذييل غير مفعّل.';
+}
+function toast(message) { $('toast').textContent=message;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,3800); }
+function setStatus(message) { $('statusText').textContent=message; }
+function changed(rebuild=false) {
+  if(rebuild){renderShell();activateTab(activeTab);}
+  updateVisibility();clearTimeout(updateTimer);updateTimer=setTimeout(updateOutput,140);
+  clearTimeout(saveTimer);if(state.settings.autosave)saveTimer=setTimeout(()=>saveProject(true),500);
+}
+function showDialog(title,body,buttons) {
+  const dialog=$('appDialog'); if(dialog.open)dialog.close();
+  $('dialogTitle').textContent=title;$('dialogBody').innerHTML=body;$('dialogActions').innerHTML='';
+  for(const item of buttons){const b=document.createElement('button');b.textContent=item.label;b.className=item.primary?'primary':'';b.addEventListener('click',item.action);$('dialogActions').appendChild(b);}
+  dialog.showModal();
+}
+function askConfirm(message) {
+  return new Promise(resolve=>{
+    if(dialogResolve)dialogResolve(false);dialogResolve=resolve;
+    showDialog('تأكيد الإجراء',`<p>${escapeHtml(message)}</p>`,[{label:'متابعة',primary:true,action:()=>{dialogResolve=null;$('appDialog').close();resolve(true);}},{label:'إلغاء',action:()=>{dialogResolve=null;$('appDialog').close();resolve(false);}}]);
+  });
+}
+function saveProject(silent=false) {
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));setStatus('تم حفظ المشروع في هذا المتصفح');if(!silent)toast('تم حفظ القصة وإعداداتها');return true;}
+  catch{setStatus('تعذّر الحفظ في المتصفح؛ استخدم تنزيل المشروع للاحتفاظ به');if(!silent)toast('استخدم تنزيل المشروع لحفظ نسخة على جهازك');return false;}
+}
+function saveTemplates(){try{localStorage.setItem(LIBRARY_KEY,JSON.stringify(templates));return true;}catch{toast('تعذّر حفظ القوالب؛ صدّرها للاحتفاظ بها');return false;}}
+function safeFilename(value){return clean(value||'قصة_مصورة').replace(/[<>:"/\\|?*\x00-\x1F]/g,'_').slice(0,80);}
+function download(content,filename,type='text/plain;charset=utf-8') {
+  const url=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200);
+}
+async function copyOutput(value=activeOutput) {
+  try{if(!navigator.clipboard)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(value);toast('تم نسخ الناتج');}
+  catch{const area=$('outputText');const previous=area.value;area.value=value;area.focus();area.select();let done=false;try{done=document.execCommand('copy');}catch{}if(done){toast('تم نسخ الناتج');area.value=previous;}else toast('النص محدّد الآن؛ اضغط Ctrl+C لنسخه');}
+}
+
+function selectedValue(project,id) {const s=project.settings;return /مخصص/.test(String(s[id]))&&meaningful(s[id+'Custom'])?s[id+'Custom']:s[id];}
+function characterText(project=state) {
+  const cards=project.characters.map((c,i)=>[`${displayNumber(i+1,project.settings.numberStyle)}. ${c.name||'شخصية بدون اسم'}`,c.role&&'الدور: '+c.role,c.age&&'العمر: '+c.age,c.appearance&&'الهيئة: '+c.appearance,c.outfit&&'الملابس: '+c.outfit,c.accessories&&'أدوات ثابتة: '+c.accessories,c.speech&&'الكلام: '+c.speech,c.reference&&'المرجع: '+c.reference].filter(Boolean).join(' | '));
+  if(meaningful(project.settings.storyCharacters))cards.push(project.settings.storyCharacters);
+  return cards.join('\n');
+}
+function contextLines(s,full=false) {
+  const ids=['subject','purpose','subjectArea','gradeLevel','audienceType','ageRange','readingLevel','lessonTitle','learningGoal','storyGenre','storyStructure','customStructure','learningApproach','interactionMode','readingDuration','targetVocabulary','valueFocus','misconceptions','cultureSetting','accessibilityNotes'];
+  if(full)ids.push('assessment','sourceCitation');
+  return ids.filter(id=>meaningful(s[id])&&(id!=='customStructure'||/مخصص/.test(s.storyStructure))).map(id=>FIELDS.find(f=>f.id===id).label+': '+text(s[id])).join('\n');
+}
+function hasNoImageText(s){return /بدون نص/.test(s.storyTextPlacement);}
+function tashkeelInstruction(s,phase='content') {
+  if(s.requireFullTashkeel){
+    if(phase==='image'&&hasNoImageText(s))return 'التشكيل الكامل مطلوب في النصوص المخصصة للقراءة خارج الصورة فقط؛ لا تطبع حروفًا أو حركات داخل الصورة في وضع الصور بلا نص.';
+    return [
+      'التشكيل الكامل للقراءة مفعّل: شكّل جميع النصوص العربية الموجّهة للطفل تشكيلًا كاملًا صحيحًا بحسب السياق، بما يشمل عنوان القصة وعناوين الصفحات والسرد والحوار والأسئلة والمفردات ونصوص الغلاف.',
+      'استخدم الفتحة والضمة والكسرة والسكون والشدة والتنوين حيث تلزم، وراجع الضبط النحوي والصرفي وأواخر الكلمات لتساعد الطفل على القراءة المتقنة.',
+      'في النص العادي المزوّد، استكمل الحركات الناقصة فقط مع حفظ الحروف والكلمات والترتيب والمعنى وعلامات الترقيم والحركات المعتمدة. حفظ النص حرفيًا يسمح هنا بإضافة التشكيل فقط، ولا يسمح بإعادة الصياغة أو الحذف.',
+      'الآيات والأحاديث والاقتباسات المنقولة تُنسخ كما زُوّدت بحركاتها، ولا يُستكمل تشكيلها من التخمين؛ أرقام التواصل والروابط والأكواد لا تُغيّر.',
+      phase==='content'?'أعد النصوص المقروءة مشكولة في حقولها، وفي النصوص الحرفية داخل البرومبت السريع ونسخة JSON إن طُلبت. أبقِ أسماء الحاويات والحقول ومفاتيح JSON كما هي؛ لا تطبع تعليمات التشكيل داخل الصور.':'احفظ التشكيل في النصوص المستوردة حرفًا حرفًا، ولا تسقط أي حركة عند رسم النص داخل الصورة. لا تستبدل النص المشكول بنسخة بلا حركات.'
+    ].join('\n');
+  }
+  if(s.tashkeelMode==='key')return 'شكّل المفردات المستهدفة في النص الجديد عند الحاجة، دون إلزام بقية النص بالتشكيل الكامل أو تغيير النص الحرفي.';
+  if(s.tashkeelMode==='preserve')return 'احفظ التشكيل المُدخل فقط، دون فرض تشكيل إضافي أو إلزام النص الجديد بالتشكيل الكامل.';
+  if(s.tashkeelMode==='none')return 'لا تضف تشكيلًا جديدًا؛ احفظ أي تشكيل موجود في النص الحرفي.';
+  return 'التشكيل اختياري: لا يلزم تشكيل النص الجديد تشكيلًا كاملًا، ولا تحذف الحركات الموجودة في النص المزوّد.';
+}
+function arabicGuards(s) {
+  const lines=[];
+  if(s.rtl)lines.push('كل النصوص العربية RTL، ومحاذاتها يمين داخل مساحاتها. ابدأ قراءة اللقطات والفقاعات من يمين الصف، ثم يسارًا، وانتقل إلى الصف التالي من اليمين.');
+  if(s.viewerPerspective)lines.push('يمين ويسار يُحددان من منظور المشاهد.');
+  if(s.strictArabic)lines.push('دقّق العربية إملائيًا ونحويًا؛ لا تعرض نصًا وهميًا، ولا تترجم النص العربي إلى لغة أخرى.');
+  if(s.keepTashkeel||s.requireFullTashkeel)lines.push(s.requireFullTashkeel?'حافظ على الحركات المعتمدة المزوّدة ومواضع الهمزات والنقاط وعلامات الترقيم؛ استكمل الحركات الناقصة في النص العادي وفق قاعدة التشكيل الكامل.':'حافظ على التشكيل المُدخل كما هو، وعلى مواضع الهمزات والنقاط وعلامات الترقيم.');
+  if(s.preserveProvidedText)lines.push('النصوص المزوّدة حرفية؛ لا تحذفها ولا تختصرها ولا تعِد صياغتها. '+(s.requireFullTashkeel?'يُسمح بإضافة الحركات الناقصة إلى النص العادي فقط دون تغيير حروفه وكلماته، وبضبط هيئة الأرقام وفق النمط المختار.':'يُسمح بتغيير هيئة الأرقام فقط وفق النمط الذي اختاره المستخدم.'));
+  if(s.noMirror)lines.push('ممنوع عكس النص أو الحروف أو ترتيب الكلمات بصريًا.');
+  if(s.noFakeArabic)lines.push('ممنوع اختراع حروف عربية أو تركيب كلمات تشبه النص دون مطابقته.');
+  if(s.noSplitWords)lines.push('لا تقسّم أي كلمة عربية بين سطرين.');
+  if(s.blankIfFail)lines.push('عند تعذّر كتابة النص كاملًا بدقة، اترك مساحته نظيفة فارغة لإضافته لاحقًا.');
+  if(s.highReadability)lines.push('قدّم الوضوح: خط عربي مقروء، تباين عالٍ، مساحات كافية، ولا تضع النص فوق الوجوه أو التفاصيل المزدحمة.');
+  if(s.consistentDigits)lines.push(s.numberStyle==='eastern'?'الأرقام الظاهرة داخل الصور هندية شرقية فقط: ٠١٢٣٤٥٦٧٨٩. لا تستخدم أرقامًا لاتينية أو فارسية.':s.numberStyle==='english'?'الأرقام الظاهرة داخل الصور إنجليزية فقط: 0123456789.':'احفظ نمط الأرقام في النص المُدخل دون خلط غير مقصود.');
+  if(s.protectSacredText)lines.push('إذا وُجدت آية أو حديث أو نص منقول: انسخه من النص المزوّد حرفيًا فقط، دون استكمال من الذاكرة أو اختراع نقل أو نسبة. عند الغموض اتركه للمراجعة.');
+  if(s.protectContactNumbers)lines.push('انسخ أرقام التواصل حرفًا حرفًا وفق نمط الأرقام المختار، ولا تستبدلها بأصفار أو أرقام افتراضية.');
+  if(s.childAppropriate)lines.push('المحتوى والتعبيرات مناسبة للعمر المُحدد، وتخدم الهدف التعليمي دون مشاهد مخيفة أو سلوك مؤذٍ يجري تقديمه بوصفه مرغوبًا.');
+  if(hasNoImageText(s))lines.push('هذه نسخة صور بلا نص: لا تطبع عنوانًا أو سردًا أو حوارًا أو أرقام صفحات أو تذييلًا، واترك مساحات النص نظيفة.');
+  if(meaningful(s.textFormatting))lines.push(text(s.textFormatting));
+  return lines.join('\n- ');
+}
+function visualLines(s,short=false) {
+  const values=[['مقاس الصفحة',s.storyPageSize],['النمط الفني العام',s.style],['أسلوب الرسم',/مخصص/.test(s.storyArtStyle)?s.artStyleCustom||s.storyArtStyle:s.storyArtStyle],['درجة ثبات الشخصيات',s.storyConsistency],['الألوان والجو',s.colors],['الإضاءة',selectedValue(state,'lighting')],['زاوية المشهد',selectedValue(state,'cameraAngle')],['الخلفية',selectedValue(state,'backgroundStyle')],['موضع العناصر',selectedValue(state,'mainElementPosition')],['التوزيع العام',s.layoutType],['الطباعة',s.printMode],['الدقة المستهدفة',s.resolution],['جودة الإخراج',s.qualityLevel],['الهوامش الآمنة',s.safeMargin]];
+  if(!short)values.push(['المكان والبيئة',s.sceneDesc],['العناصر الثابتة',s.extraElements],['ثوابت الاستمرارية',s.continuityNotes],['الخط',selectedValue(state,'fontStyle')],['أهمية النص',s.textImportance],['موضع النص العام',selectedValue(state,'textPosition')]);
+  const lines=values.filter(([,v])=>meaningful(v)).map(([l,v])=>l+': '+text(v));
+  if(/أبيض وأسود/.test(s.printMode))lines.push('الإخراج بالأبيض والأسود فقط بتباين مرتفع. أوصاف الألوان في المراجع لتعريف الشخصيات، وتُترجم بصريًا إلى درجات رمادية واضحة.');
+  return lines.join('\n');
+}
+function englishVisualCue(s) {
+  if(s.visualPromptMode==='arabicOnly')return '';
+  return 'English visual brief: a coherent Arabic educational illustrated story. ONE PAGE = ONE IMAGE. Create separate finished page images, with consistent character identity, outfits, age, color palette and art style. Read comic panels and speech bubbles from the viewer’s right to left. Do not combine multiple story pages into a contact sheet or mockup. Only reproduce the exact Arabic visible text specified for each page. '+(hasNoImageText(s)?'No text, lettering, page numbers or footer inside the image.':(s.requireFullTashkeel?'Preserve all supplied Arabic diacritics; complete missing diacritics in ordinary child-facing text without changing its letters or words. Copy supplied quotations verbatim. ':'')+'Keep text legible and separate from faces and busy detail.');
+}
+function footerInstruction(s,index) {
+  if(s.enableFooter!=='yes'||hasNoImageText(s))return '';
+  const isCover=index==='cover',isBack=index==='back';
+  if(s.footerScope==='cover'&&!isCover)return '';
+  if(s.footerScope==='pages'&&(isCover||isBack))return '';
+  if(s.footerScope==='last'&&index!==activePages().length-1)return '';
+  const content=composeFooterText(s);if(!clean(content))return '';
+  return `التذييل الوحيد: «${text(content)}»\nالموضع: ${text(s.footerPosition)}. الأسلوب: ${text(s.footerStyle)}. الحجم: ${text(s.footerSize)}. ${footerExactTextInstruction(content)} لا تكرره في الحوار أو السرد.`;
+}
+function pageInstructions(p,index) {
+  const s=state.settings,lines=[`الصفحة ${num(index+1)} من ${num(activePages().length)}:`];
+  if(p.title)lines.push((hasNoImageText(s)?'موضوع هذه الصفحة — سياق لا يُطبع: «':'عنوان هذه الصفحة حرفيًا: «')+text(p.title)+'»');
+  lines.push(p.scene?'وصف المشهد: '+text(p.scene):s.storySourceMode==='plan'?'مشهد هذه الصفحة: طوّره بما يخدم موقعه في تسلسل القصة والهدف التعليمي، مع الحفاظ على جميع الثوابت.':'وصف المشهد غير مُدخل؛ لا تختلق محتوى بديلًا، واطلب تحديده قبل التنفيذ.');
+  if(p.characters)lines.push('الشخصيات في المشهد: '+text(p.characters));
+  if(p.camera)lines.push('زاوية خاصة لهذه الصفحة: '+text(p.camera));
+  if(p.emotion)lines.push('المشاعر: '+text(p.emotion));
+  if(p.reference)lines.push('المرجع الخاص: '+text(p.reference)+' — يُرفق مع الطلب عند استخدام صورة.');
+  if(p.learning)lines.push('فكرة تعليمية للمشهد — سياق لا يُطبع تلقائيًا: '+text(p.learning));
+  if(p.panels)lines.push('اللقطات داخل هذه الصفحة فقط، بقراءة عربية من اليمين إلى اليسار:\n'+text(p.panels));
+  else lines.push('توزيع اللقطات: '+FIELDS.find(f=>f.id==='panelLayout').options.find(([v])=>v===s.panelLayout)?.[1]);
+  if(hasNoImageText(s)){
+    if(p.narrative||p.dialogue||p.question)lines.push('مرجع سردي لفهم المشهد فقط، لا يُكتب داخل الصورة:\n'+[p.narrative,p.dialogue,p.question].filter(Boolean).map(text).join('\n'));
+  }else{
+    if(p.narrative)lines.push('السرد الظاهر حرفيًا:\n«'+text(p.narrative)+'»');
+    if(p.dialogue)lines.push('الحوار الظاهر حرفيًا — أسماء المتحدثين تحدد ذيول الفقاعات ولا تُطبع إلا إذا طُلب:\n'+text(p.dialogue));
+    if(!p.narrative&&!p.dialogue)lines.push(s.storySourceMode==='plan'?'إن احتاج المشهد نصًا جديدًا، اجعله قصيرًا متسقًا مع القصة، دون تجاوز الحد المستهدف للكلمات.':'لا تضف سردًا أو حوارًا لم يُزوَّد لهذه الصفحة.');
+    if(p.question&&(s.interactionMode==='inPage'||s.interactionMode==='end'&&index===activePages().length-1))lines.push('سؤال القارئ حرفيًا — دون إظهار الإجابة: '+text(p.question));
+    if(s.pageNumbers==='yes')lines.push('رقم الصفحة الظاهر فقط أسفل الصفحة: '+num(index+1));
+    lines.push('موضع النص: '+text(s.storyTextPlacement)+'. '+storyTextPlacementInstruction(s.storyTextPlacement));
+  }
+  const footer=footerInstruction(s,index);if(footer)lines.push(footer);
+  return lines.join('\n');
+}
+function coverInstructions(kind='cover') {
+  const s=state.settings,back=kind==='back',lines=[back?'الغلاف الخلفي — صورة مستقلة بعد القصة، لا يُحسب ضمن صفحاتها.':'الغلاف الأمامي — صورة مستقلة قبل القصة، لا يُحسب ضمن صفحاتها.'];
+  lines.push('حافظ على نفس أسلوب القصة والشخصيات وألوانها، ولا تجمع الغلاف والصفحات داخل صورة واحدة.');
+  if(back){if(s.backCoverText)lines.push((hasNoImageText(s)?'سياق لا يطبع: ':'النص الحرفي الوحيد: ')+text(s.backCoverText));else lines.push('صمّم مشهدًا هادئًا من بيئة القصة دون اختراع ملخص أو بيانات.');}
+  else{
+    if(s.title)lines.push((hasNoImageText(s)?'موضوع الغلاف — لا يُكتب: ':'عنوان الغلاف الحرفي: ')+text(s.title));
+    if(s.storyCoverSubtitle&&!hasNoImageText(s))lines.push('العبارة التحتية الحرفية: '+text(s.storyCoverSubtitle));
+    if(s.coverScene)lines.push('مشهد الغلاف: '+text(s.coverScene));
+    if(s.publisher&&!hasNoImageText(s))lines.push('اسم الجهة حرفيًا على الغلاف: '+text(s.publisher));
+    lines.push('لا تضف حوارات الصفحات أو نصوص المشاهد إلى الغلاف، ولا تخترع أسماء مؤلفين أو شعارات أو عبارة تحتية.');
+  }
+  const footer=footerInstruction(s,kind);if(footer)lines.push(footer);
+  return lines.join('\n');
+}
+function referenceInstruction(s) {
+  if(s.referenceMode==='attached')return 'استخدم صور الشخصيات المرجعية المُرفقة مع الطلب لتثبيت هويتها. إذا لم تُرفق الصور فلا تدّعِ الاطلاع عليها، واطلب إرفاقها.';
+  if(s.referenceMode==='firstPage')return 'اعتمد أول صفحة مُعتمدة مرجعًا بصريًا للصفحات اللاحقة. يرفق المستخدم تلك الصفحة مع كل طلب لاحق؛ لا تدّعِ رؤية مرجع غير مُرفق.';
+  return 'اعتمد بطاقات الشخصيات وأوصافها التفصيلية لتثبيت الهوية في كل صفحة.';
+}
+function narrativeConstraints(s) {
+  return [`بناء الحكاية: ${text(/مخصص/.test(s.storyStructure)?s.customStructure||s.storyStructure:s.storyStructure)}.`,`صوت الراوي: ${text(s.narratorStyle)}. كثافة الحوار: ${text(s.dialogueDensity)}.`,`الحد المستهدف للنص الظاهر في الصفحة: ${num(s.maxWords)} كلمة؛ لا تختصر نصًا حرفيًا مُدخلًا لإجباره على هذا الحد.`,`لا تضف شخصية رئيسية أو حدثًا يناقض ما تم اعتماده. حافظ على العلاقة السببية بين الصفحات والانتقالات الواضحة.`,s.referenceText?'المادة المرجعية المزوّدة سياق معتمد وليست نصًا ظاهرًا بالكامل. لا تضف حقائق أو اقتباسات لا يدعمها المصدر.':'لا تخترع بيانات مدرسية أو أسماء جهات أو نسبًا علمية أو مصادر؛ استخدم المعلومات المزوّدة.',s.interactionMode==='none'?'لا تضف أسئلة للقارئ داخل الصور.':s.interactionMode==='oral'?'أسئلة المعلم خارج الصور؛ لا تطبع سؤال النشاط أو إجابته داخل الصفحة.':'سؤال القارئ يظل مفتوحًا دون كشف إجابته؛ في وضع التقويم الختامي اجعل الأسئلة في الصفحة الأخيرة.'].join('\n');
+}
+function buildImagePrompt(selection=null) {
+  const s=state.settings,short=s.outputMode==='short',pages=activePages();
+  const parts=[`أنشئ ${selection===null?'قصة مصورة عربية تعليمية':'صورة واحدة مستقلة من قصة عربية تعليمية'}${s.title?' بعنوان «'+text(s.title)+'»':''}.`,
+    s.designMode==='editExistingImage'?'المهمة تعديل الصور المرجعية الموجودة وفق الأوصاف المحددة، مع الحفاظ على هويتها وعناصرها الأصلية. يُرفق المرجع مع الطلب، ولا تفترض وجود صورة غير مُرفقة.':'المهمة تصميم صور جديدة من الصفر وفق المشروع التالي.',
+    'قاعدة الإخراج: كل صفحة صورة كاملة مستقلة. ONE PAGE = ONE IMAGE. لا تجمع صفحات متعددة في صورة واحدة، ولا تُخرج لوحة معاينة أو Contact Sheet أو Mockup. اللقطات داخل الصفحة نفسها مسموحة فقط وفق توزيعها المحدد.',
+    englishVisualCue(s),contextLines(s,s.outputMode==='full'),visualLines(s,short),'ثبات الشخصيات:\n'+(characterText()?text(characterText()):'إذا كان الوضع تطوير فكرة، صمّم شخصيات مناسبة للفئة والسياق ثم ثبّتها في كل الصفحات. في وضع النص الحرفي اطلب الأوصاف الناقصة قبل التنفيذ.'),referenceInstruction(s),narrativeConstraints(s),tashkeelInstruction(s,'image'),'- '+arabicGuards(s)];
+  const scope=selection!==null?'single':s.outputTarget;
+  if(scope==='single')parts.push(selection==='cover'||selection==='back'?coverInstructions(selection):pageInstructions(pages[Number(selection)]||newPage(),Number(selection)));
+  else if(scope==='cover')parts.push(s.storyCoverMode==='on'?coverInstructions():'الغلاف الأمامي غير مفعّل. فعّله قبل طلب صورة غلاف.');
+  else if(scope==='back')parts.push(s.backCoverMode==='on'?coverInstructions('back'):'الغلاف الخلفي غير مفعّل. فعّله قبل طلب صورته.');
+  else if(scope==='batch'){
+    const start=clampInt(s.batchStart,1,pages.length,1)-1,end=Math.min(pages.length,start+clampInt(s.batchSize,1,10,6));
+    parts.push(`نفّذ هذه الدفعة فقط: الصفحات من ${num(start+1)} إلى ${num(end)}، أي ${num(end-start)} صور مستقلة. الغلاف خارج هذه الدفعة.`,...pages.slice(start,end).map((p,i)=>pageInstructions(p,start+i)));
+    if(start>0)parts.push('سياق الانتقال من الصفحة السابقة — لا تولّد صورتها:\n'+text(pages[start-1].scene));
+  }else{
+    parts.push(`عدد صفحات المحتوى: ${num(pages.length)}. الغلاف الأمامي والخلفي مستقلان ولا يدخلان في هذا العدد. نفّذ الصور في دفعات منفصلة لا تتجاوز ${num(10)} صور للدفعة الواحدة، مع بقاء كل صفحة صورة مستقلة.`);
+    if(s.storyCoverMode==='on')parts.push(coverInstructions());
+    parts.push(...pages.map(pageInstructions));if(s.backCoverMode==='on')parts.push(coverInstructions('back'));
+  }
+  if(s.referenceText&&s.outputMode==='full')parts.push('المادة المرجعية — سياق فقط ولا تطبع كاملًا:\n'+text(s.referenceText));
+  if(s.arabicText)parts.push('نص حرفي إضافي: لا تطبعه إلا في الصفحة والموضع اللذين يحددهما المستخدم، وإلا أبقه للمراجعة:\n'+text(s.arabicText));
+  if(s.secondaryText)parts.push('نص ثانوي حرفي: لا يضاف تلقائيًا إلى كل صفحة؛ استخدمه فقط في الموضع المحدد:\n'+text(s.secondaryText));
+  const directives=collectDirectives();if(directives.length)parts.push('إرشادات تنفيذية لا تُطبع داخل الصور:\n'+directives.map(v=>'- '+v).join('\n'));
+  if(s.specialInstructions)parts.push('تعليمات إضافية:\n'+text(s.specialInstructions));
+  if(s.includeNegativePrompt)parts.push('ممنوعات التصميم:\n'+buildNegativePrompt());
+  return parts.filter(Boolean).join('\n\n');
+}
+function collectDirectives() {
+  const values=[...FIELDS.filter(f=>f.type==='textarea'||f.type==='text').map(f=>state.settings[f.id]),...state.characters.flatMap(c=>CHAR_FIELDS.map(([k])=>c[k])),...activePages().flatMap(p=>Object.entries(p).filter(([k])=>k!=='id').map(([,v])=>v))];
+  return [...new Set(values.flatMap(v=>splitInlineGuidance(v).directives))];
+}
+function buildNegativePrompt() {
+  const s=state.settings,parts=['دمج صفحات القصة في صورة واحدة','تغيير هوية الشخصية أو عمرها أو ملابسها بين المشاهد','اختلاف أسلوب الرسم أو الألوان دون طلب','فقاعات بلا متحدث واضح','نص فوق الوجوه','ازدحام التفاصيل','تكرار الحوار أو العنوان','شخصيات أو أحداث تناقض القصة','اختراع شعار أو اسم مؤلف أو بيانات مدرسة'];
+  if(s.rtl)parts.push('ترتيب اللقطات أو الفقاعات من اليسار إلى اليمين');if(s.noMirror)parts.push('عكس الحروف والكلمات');if(s.noFakeArabic)parts.push('حروف عربية وهمية أو مشوهة');if(s.noSplitWords)parts.push('كلمات مكسورة بين سطرين');if(s.preserveProvidedText)parts.push('تحريف النصوص الحرفية');if(s.protectSacredText)parts.push('اختراع آية أو حديث أو اقتباس منسوب');if(s.protectContactNumbers)parts.push('استبدال أرقام التواصل بأصفار');if(hasNoImageText(s))parts.push('أي نص أو عنوان أو تذييل أو ترقيم داخل الصور');if(s.negativeNotes)parts.push(text(s.negativeNotes));
+  return parts.join('؛ ')+'.';
+}
+
+function planText() {
+  const s=state.settings;
+  return ['[عنوان القصة]',s.title,'','[الفكرة]',s.subject,'','[الهدف التعليمي]',s.learningGoal,'','[الشخصيات]',characterText(),'', '[الصفحات]',...activePages().flatMap((p,i)=>[`الصفحة ${num(i+1)}:`,...Object.entries({العنوان:p.title,المشهد:p.scene,السرد:p.narrative,الحوار:p.dialogue,الشخصيات:p.characters,التعلم:p.learning,النشاط:p.question,اللقطات:p.panels,الزاوية:p.camera,المشاعر:p.emotion,المرجع:p.reference}).filter(([,v])=>meaningful(v)).map(([k,v])=>k+': '+v),''])].join('\n');
+}
+function buildContentRequest() {
+  const s=state.settings;
+  const format=`[عنوان القصة]\nالعنوان هنا\n\n[الفكرة]\nالفكرة هنا\n\n[الهدف التعليمي]\nالهدف هنا\n\n[الشخصيات]\nالاسم: ... | الدور: ... | العمر: ... | الهيئة: ... | الملابس: ... | الأدوات: ...\n\n[الصفحات]\nالصفحة ١:\nالعنوان: ...\nالمشهد: وصف الصورة فقط\nالسرد: النص الذي سيظهر حرفيًا\nالحوار: اسم المتحدث: عبارته\nالشخصيات: أسماء الشخصيات في الصفحة\nالتعلم: المهارة أو الفكرة — لا تطبع تلقائيًا\nالنشاط: سؤال القارئ إن طُلب\nاللقطات: تفصيل اللقطات فقط إذا طُلب تعددها\nالزاوية: ...\nالمشاعر: ...\nالمرجع: ...\nثم بقية الصفحات بالطريقة نفسها.\n\n[الممنوعات]\nممنوعات مرتبطة بالقصة\n\n[تعليمات إضافية]\nتعليمات الاتساق والتنفيذ\n\n[برومبت سريع]\nبرومبت جاهز لإنشاء الصور، يحفظ النصوص والشخصيات ويخرج كل صفحة في صورة مستقلة.`;
+  const parts=['تصرّف ككاتب قصص مصورة تعليمية، ومصمم تسلسل بصري، ومتخصص في مستوى القراءة، ومدقق لغوي عربي. المطلوب إعداد قصة كاملة قابلة للاستيراد في مولّد «حكاية»، مع برومبت سريع منفصل.',
+    s.storySourceMode==='exact'?'المحتوى المُدخل حرفي: نظّمه في صفحات دون تغيير النصوص أو اختصارها. إذا نقصت معلومات أساسية فاذكرها بوضوح، ولا تختلق بديلًا.':'طوّر الفكرة إلى قصة أصلية مترابطة تخدم الهدف والمستوى المحددين. لا تُضف بيانات إدارية أو حقائق أو مصادر غير مزوّدة.',
+    `العدد: ${num(activePages().length)} صفحات محتوى، والغلاف ${s.storyCoverMode==='on'?'مفعّل ومستقل':'غير مطلوب'}${s.backCoverMode==='on'?'، مع غلاف خلفي مستقل':''}.`,
+    contextLines(s,true),visualLines(s,s.outputMode==='short'),narrativeConstraints(s),referenceInstruction(s),'- '+arabicGuards(s),
+    tashkeelInstruction(s),
+    'افصل وصف الرسم عن النص الظاهر، ولا تضع التعليمات أو أهداف التعلّم أو أسماء الحاويات داخل الصورة. اجعل ذيل كل فقاعة يشير إلى المتحدث الصحيح، ولا تضف حوارًا إلى الغلاف.',
+    'التذييل يؤخذ من إعدادات المستخدم فقط. لا تخترع أسماء معلمين أو جهات أو تواريخ، ولا تضع التذييل داخل السرد.',
+    s.enableFooter==='yes'?'التذييل المُعتمد: '+(text(composeFooterText(s))||'لم يُكتب، لا تقترح نصًا بديلًا.'):'التذييل غير مفعّل.',
+    'المشروع الحالي — احفظ جميع النصوص المُدخلة والأوصاف الثابتة، واستكمل الفراغات فقط عند السماح بتطوير الفكرة:\n'+planText(),
+    s.referenceText?'المصدر أو النص المرجعي المزوّد:\n'+s.referenceText:'',s.arabicText?'نص حرفي إضافي يحدّد المستخدم موضعه:\n'+s.arabicText:'',s.secondaryText?'نص ثانوي حرفي اختياري:\n'+s.secondaryText:'',
+    'ممنوعات:\n'+buildNegativePrompt(),s.specialInstructions?'تعليمات خاصة:\n'+s.specialInstructions:'',
+    'صيغة الرد المطلوبة: استخدم العناوين المحاطة بأقواس مربعة التالية حرفيًا. لا تضع الجدول بدل الصفحات، ولا تختصر صفحات القصة في ملخص. احذف الحقول الاختيارية الفارغة، ولا تكتب نقاط الحذف أو نصوصًا وهمية في الرد النهائي.\n'+format];
+  if($('requestJsonOutput').checked){
+    const skeleton={artifact:'arabic-story-project',version:1,settings:{title:s.title,subject:s.subject,learningGoal:s.learningGoal,storyPageCount:activePages().length,storyPageSize:s.storyPageSize,storyArtStyle:s.storyArtStyle,requireFullTashkeel:s.requireFullTashkeel,tashkeelMode:s.tashkeelMode,colors:s.colors,negativeNotes:s.negativeNotes,specialInstructions:s.specialInstructions},characters:[{name:'',role:'',age:'',appearance:'',outfit:'',accessories:'',speech:'',reference:''}],pages:[{title:'',scene:'',narrative:'',dialogue:'',characters:'',learning:'',question:'',panels:'',camera:'',emotion:'',reference:''}],quickPrompt:''};
+    parts.push('بعد الحاويات والبرومبت السريع، أضف كتلة JSON صحيحة بالهيكل التالي. استبدل الفراغات بالمحتوى الحقيقي، واكتب كل الشخصيات وكل صفحات المحتوى بالعدد المحدد. لا تُدخل الغلاف ضمن مصفوفة pages. لا تغيّر إعدادات المستخدم أو نص التذييل.\n```json\n'+JSON.stringify(skeleton,null,2)+'\n```');
+  }
+  return parts.filter(Boolean).join('\n\n');
+}
+function updateOutput() {
+  syncPageSelector();
+  const hints={request:'انسخ الطلب إلى مساعد الذكاء، ثم استورد الرد الكامل. لا يتصل هذا الملف بخدمة توليد تلقائي.',main:'انسخ البرومبت إلى أداة الصور. استخدم نطاق الدفعة أو صفحة مستقلة للقصص الطويلة.',page:'أرفق مرجع الشخصيات أو أول صفحة معتمدة عند الحاجة للحفاظ على الاتساق.',negative:'أضف الممنوعات في حقل Negative Prompt إذا كانت أداة الصور تدعمه.',json:'ملف المشروع يحتفظ بالإعدادات وبطاقات الشخصيات والصفحات، ويمكن إعادة استيراده.'};
+  let result='';
+  if(outputTab==='request')result=buildContentRequest();else if(outputTab==='main')result=buildImagePrompt();else if(outputTab==='page')result=buildImagePrompt($('pageOutputSelect').value);else if(outputTab==='negative')result=buildNegativePrompt();else result=JSON.stringify(state,null,2);
+  activeOutput=result;$('outputText').value=result;$('outputText').classList.toggle('json',outputTab==='json');$('outputHint').textContent=hints[outputTab];
+  $('pageOutputSelect').hidden=outputTab!=='page';$('jsonRequestRow').hidden=outputTab!=='request';
+  document.querySelectorAll('[data-output]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.output===outputTab)));
+  updateReview();
+}
+function updateReview() {
+  const s=state.settings,pages=activePages(),scenes=pages.filter(p=>clean(p.scene)).length;
+  const named=state.characters.filter(c=>clean(c.name)).length,chars=Boolean(named||clean(s.storyCharacters));
+  const checks=[{ok:!!clean(s.title),msg:s.title?'عنوان القصة محدد':'أضف عنوانًا للقصة'},
+    {ok:!!clean(s.subject)||!!clean(s.referenceText),msg:s.subject||s.referenceText?'الفكرة أو المادة المرجعية محددة':'أضف فكرة أو مادة مرجعية'},
+    {ok:!!clean(s.learningGoal),msg:s.learningGoal?'الهدف التعليمي محدد':'حدّد هدف التعلّم'},
+    {ok:chars,msg:chars?`وصف الشخصيات موجود${named?' — '+num(named)+' بطاقات':''}`:'أضف أوصافًا للشخصيات لتوجيه ثباتها'},
+    {ok:scenes===pages.length,msg:`أوصاف المشاهد: ${num(scenes)} من ${num(pages.length)} صفحات`},
+    {ok:!!clean(s.gradeLevel)||!!clean(s.ageRange),msg:s.gradeLevel||s.ageRange?'مستوى القارئ أو عمره محدد':'حدّد عمر القارئ أو مستواه'}];
+  const score=Math.round(checks.filter(c=>c.ok).length/checks.length*100);$('scoreText').textContent=englishToEastern(String(score))+'٪';$('scoreBar').style.width=score+'%';
+  const long=pages.map((p,i)=>({i,count:[p.narrative,p.dialogue].join(' ').trim().split(/\s+/).filter(Boolean).length})).filter(p=>p.count>Number(s.maxWords));
+  if(long.length)checks.push({ok:false,msg:'نص طويل في الصفحات '+long.map(p=>num(p.i+1)).join('، ')+'؛ كبّر مساحته أو قسّمه دون تحريفه.'});
+  if(s.referenceMode!=='description')checks.push({ok:false,msg:'أرفق المرجع البصري بنفسك مع الطلب في أداة الصور.'});
+  if(hasNoImageText(s))checks.push({ok:true,msg:'وضع الصور بلا نص يوقف طباعة العناوين والترقيم والتذييل.'});
+  if(s.requireFullTashkeel)checks.push({ok:true,msg:'التشكيل الكامل مطلوب للعناوين والسرد والحوار؛ راجع ضبط الحركات في رد الذكاء.'});
+  if(s.enableFooter==='yes'&&!clean(composeFooterText(s)))checks.push({ok:false,msg:'التذييل مفعّل لكنه فارغ؛ لن يُخترع بديل.'});
+  if(s.storySourceMode==='exact'&&scenes<pages.length)checks.push({ok:false,msg:'في وضع النص الحرفي، استكمل أوصاف الصفحات الناقصة قبل توليد الصور.'});
+  $('reviewList').innerHTML=checks.map(c=>`<li><span class="${c.ok?'ok':'warn'}" aria-hidden="true">${c.ok?'✓':'○'}</span><span>${escapeHtml(c.msg)}</span></li>`).join('');
+  $('projectMeta').textContent=`${s.title||'مشروع قصة جديدة'} • ${num(pages.length)} صفحات${s.storyCoverMode==='on'?' + غلاف':''}${s.backCoverMode==='on'?' + غلاف خلفي':''}`;
+}
+
+function booleanValue(value){return value===true||value===1||typeof value==='string'&&/^(true|1|yes|on|مفعل|مفعّل)$/i.test(value.trim());}
+function record(value){return !!value&&typeof value==='object'&&!Array.isArray(value);}
+function plain(value){return typeof value==='string'||typeof value==='number'?String(value):'';}
+function normalizeCharacter(c){
+  const result=newCharacter();if(!record(c))return result;
+  if(typeof c.id==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(c.id))result.id=c.id;
+  const aliases={name:['name','اسم','characterName'],role:['role','دور'],age:['age','عمر'],appearance:['appearance','description','visualDescription','هيئة','وصف'],outfit:['outfit','clothing','ملابس'],accessories:['accessories','أدوات'],speech:['speech','voice','كلام'],reference:['reference','referenceImage','مرجع']};
+  for(const [key,names] of Object.entries(aliases)){const found=names.find(n=>Object.prototype.hasOwnProperty.call(c,n));if(found)result[key]=plain(c[found]);}
+  return result;
+}
+function normalizePage(p){
+  const result=newPage();if(!record(p))return result;
+  if(typeof p.id==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(p.id))result.id=p.id;
+  const aliases={title:['title','pageTitle','عنوان'],scene:['scene','sceneDescription','description','visual','مشهد'],narrative:['narrative','narration','text','visibleText','سرد'],dialogue:['dialogue','dialog','حوار'],characters:['characters','characterNames','شخصيات'],learning:['learning','learningPoint','goal','تعلم'],question:['question','activity','interaction','نشاط'],panels:['panels','frames','لقطات'],camera:['camera','cameraAngle','زاوية'],emotion:['emotion','mood','مشاعر'],reference:['reference','مرجع']};
+  for(const [key,names]of Object.entries(aliases)){const found=names.find(n=>Object.prototype.hasOwnProperty.call(p,n));if(!found)continue;const v=p[found];result[key]=Array.isArray(v)?v.map(x=>record(x)?Object.entries(x).map(([k,y])=>k+': '+plain(y)).join(' | '):plain(x)).join('\n'):plain(v);}
+  return result;
+}
+function normalizeProject(payload,base=null){
+  if(!record(payload))throw new Error('لا يحتوي الملف مشروعًا صالحًا.');
+  if(record(payload.project))payload=payload.project;
+  const result=base?clone(base):freshProject(),rawSettings=record(payload.settings)?payload.settings:record(payload.data)?payload.data:payload;
+  const settings=Object.assign(Object.create(null),rawSettings);
+  if(!settings.referenceText&&typeof settings.referenceMaterial==='string')settings.referenceText=settings.referenceMaterial;
+  if(!settings.arabicText&&typeof settings.visibleDesignText==='string')settings.arabicText=settings.visibleDesignText;
+  if(typeof settings.inlineGuidance==='string'&&clean(settings.inlineGuidance))settings.specialInstructions=[settings.specialInstructions||'','إرشادات مستوردة من المشروع الأصلي:\n'+settings.inlineGuidance].filter(Boolean).join('\n');
+  const originalCompact=settings.encoding==='UTF-8'&&typeof settings.imageType==='string'&&typeof settings.encodingNote==='string';
+  if(originalCompact){
+    for(const id of ['strictArabic','keepTashkeel','rtl','viewerPerspective','noMirror','noFakeArabic','noSplitWords','blankIfFail','highReadability','consistentDigits','includeNegativePrompt'])if(!Object.prototype.hasOwnProperty.call(settings,id))settings[id]=false;
+    if(!settings.storyCoverMode)settings.storyCoverMode='off';
+    if(settings.footerText&&!settings.footerMode)settings.footerMode='manual';
+  }
+  let recognized=0;
+  for(const f of FIELDS){if(!Object.prototype.hasOwnProperty.call(settings,f.id))continue;recognized++;const value=settings[f.id];
+    if(f.type==='checkbox')result.settings[f.id]=booleanValue(value);
+    else if(f.type==='number')result.settings[f.id]=clampInt(value,f.min,f.max,f.default);
+    else if(f.type==='select'){
+      const v=plain(value),choice=f.options.find(([x])=>String(x)===v||/^(?:[٠-٩0-9]+)\s*صفحات?$/.test(v)&&String(x)===v);
+      if(choice)result.settings[f.id]=choice[0];
+      else if(f.id==='storyArtStyle'){result.settings.storyArtStyle='أسلوب رسم مخصص';result.settings.artStyleCustom=v;}
+      else if(FIELD_IDS.has(f.id+'Custom')){const custom=f.options.find(([x])=>/مخصص/.test(x));if(custom){result.settings[f.id]=custom[0];result.settings[f.id+'Custom']=v;}}
+    }else result.settings[f.id]=plain(value);
+  }
+  if(Object.prototype.hasOwnProperty.call(settings,'requireFullTashkeel')){
+    if(result.settings.requireFullTashkeel)result.settings.tashkeelMode='full';
+    else if(result.settings.tashkeelMode==='full')result.settings.tashkeelMode='auto';
+  }else if(Object.prototype.hasOwnProperty.call(settings,'tashkeelMode'))result.settings.requireFullTashkeel=result.settings.tashkeelMode==='full';
+  if(!Object.prototype.hasOwnProperty.call(settings,'title')&&plain(settings.arabicText)){
+    const title=plain(settings.arabicText).split('\n').find(v=>clean(v));if(title&&title.length<100)result.settings.title=stripInlineGuidance(title);
+  }
+  const characters=Array.isArray(payload.characters)?payload.characters:Array.isArray(payload.storyCharacters)?payload.storyCharacters:null;
+  if(characters){if(characters.length>30)throw new Error('المشروع يتجاوز ٣٠ شخصية؛ لم يُستبدل المحتوى.');recognized++;result.characters=characters.map(normalizeCharacter);}
+  const pages=Array.isArray(payload.pages)?payload.pages:Array.isArray(payload.storyPages)?payload.storyPages:null;
+  if(pages){recognized++;if(!pages.length)throw new Error('مصفوفة الصفحات فارغة؛ لم يُستبدل المشروع.');if(pages.length>40)throw new Error('المشروع يتجاوز ٤٠ صفحة؛ قسّمه إلى مشاريع أصغر دون حذف صفحات.');result.pages=pages.map(normalizePage);if(!Object.prototype.hasOwnProperty.call(settings,'storyPageCount'))result.settings.storyPageCount=result.pages.length;}
+  else if(typeof settings.storyPages==='string'||typeof payload.storyPages==='string'){
+    const raw=settings.storyPages||payload.storyPages;const parsed=parsePageText(raw);if(parsed.length){if(parsed.length>40)throw new Error('وصف القصة يتجاوز ٤٠ صفحة. قسّمه إلى مشاريع أصغر.');recognized++;result.pages=parsed;result.legacyStoryPages=raw;if(!Object.prototype.hasOwnProperty.call(settings,'storyPageCount'))result.settings.storyPageCount=result.pages.length;}
+  }
+  if(typeof payload.quickPrompt==='string')result.quickPrompt=payload.quickPrompt;
+  if(Object.prototype.hasOwnProperty.call(payload,'requestJsonOutput'))result.requestJsonOutput=booleanValue(payload.requestJsonOutput);
+  if(typeof payload.legacyStoryPages==='string')result.legacyStoryPages=payload.legacyStoryPages;
+  if(!recognized)throw new Error('لم أجد إعدادات قصة أو صفحات معروفة في هذا المحتوى.');
+  if(!Object.prototype.hasOwnProperty.call(settings,'storySourceMode')&&(pages||settings.storyPages)&&result.pages.some(p=>p.scene||p.narrative||p.dialogue))result.settings.storySourceMode='exact';
+  result.settings.storyPageCount=clampInt(result.settings.storyPageCount,1,40,6);
+  while(result.pages.length<result.settings.storyPageCount)result.pages.push(newPage());
+  for(const array of [result.pages,result.characters]){const seen=new Set();for(const item of array){if(seen.has(item.id))item.id=uid();seen.add(item.id);}}
+  result.settings.batchStart=clampInt(result.settings.batchStart,1,result.settings.storyPageCount,1);
+  result.artifact='arabic-story-project';result.version=APP_VERSION;
+  return result;
+}
+function headingKey(s){return String(s).replace(/[ً-ْـ]/g,'').replace(/[أإآ]/g,'ا').replace(/[٠-٩0-9]/g,'').replace(/[^\p{L}]+/gu,'').toLowerCase();}
+const PAGE_LABELS={العنوان:'title',عنوانالصفحة:'title',المشهد:'scene',وصفالمشهد:'scene',الصورة:'scene',السرد:'narrative',النص:'narrative',النصالحرفي:'narrative',النصالمطلوب:'narrative',الحوار:'dialogue',الشخصيات:'characters',التعلم:'learning',الفكرةالتعليمية:'learning',الهدف:'learning',المهارة:'learning',النشاط:'question',السؤال:'question',اللقطات:'panels',الزاوية:'camera',المشاعر:'emotion',المرجع:'reference'};
+function parsePageText(raw){
+  const pages=[],normalized=String(raw||'').replace(/\r\n/g,'\n').replace(/\*\*/g,'');
+  let current=null,key='scene';
+  for(const original of normalized.split('\n')){
+    const line=original.trim(),match=line.match(/^(?:#{1,6}\s*)?(?:[-•]\s*)?(?:\[)?(?:الصفحة|صفحة|page)\s*(?:رقم\s*)?([٠-٩0-9]+)\s*(?:\])?\s*[:：.\-–—]?(.*)$/i);
+    if(match){current=newPage();pages.push(current);key='scene';const tail=match[2].trim();if(tail)consume(tail);continue;}
+    if(current&&line)consume(line);
+  }
+  function consume(line){
+    const parts=line.split(/\s*\|\s*|(?=\s+(?:النص|السرد|الحوار|المشهد|العنوان|التعلم|النشاط|اللقطات)\s*[:：])/u);
+    for(const part of parts){const m=part.trim().match(/^([^:：]{1,50})\s*[:：]\s*(.*)$/);if(m&&PAGE_LABELS[headingKey(m[1])]){key=PAGE_LABELS[headingKey(m[1])];const v=m[2].trim();current[key]+=(current[key]?'\n':'')+v;}else current[key]+=(current[key]?'\n':'')+part.trim();}
+  }
+  return pages;
+}
+const SECTION_LABELS={عنوانالقصة:'title',العنوان:'title',الفكرة:'subject',فكرةالقصة:'subject',موضوعالقصة:'subject',الهدفالتعليمي:'learningGoal',هدفالقصة:'learningGoal',الشخصيات:'storyCharacters',الشخصياتالثابتة:'storyCharacters',وصفالشخصياتالثابتة:'storyCharacters',الصفحات:'storyPages',صفحاتالقصة:'storyPages',وصفصفحاتالقصة:'storyPages',الالوان:'colors',الالوانوالجوالبصري:'colors',اسلوبالرسم:'storyArtStyle',اسلوبالرسموالاتساقالبصري:'storyArtStyle',الممنوعات:'negativeNotes',ممنوعاتخاصة:'negativeNotes',تعليماتاضافية:'specialInstructions',تعليماتاضافيةدقيقة:'specialInstructions',برومبتسريع:'quickPrompt',برومبتسريعجاهز:'quickPrompt',النصوصالنهائية:'arabicText',النصوصالنهائيةالتييجبانتظهرحرفيا:'arabicText',وصفالمشهد:'sceneDesc',مرجعوسياقلايظهركاملافيالتصميم:'referenceText'};
+function parseAiReply(raw){
+  const fenced=[...raw.matchAll(/```(?:json)?\s*([\s\S]*?)```/gi)].map(m=>m[1].trim());
+  for(const candidate of [raw.trim(),...fenced]){if(!candidate.startsWith('{'))continue;try{return normalizeProject(JSON.parse(candidate),state);}catch{}}
+  const cleaned=raw.replace(/```[\s\S]*?```/g,'').replace(/\*\*/g,''),sections=Object.create(null);let section='';
+  for(const line of cleaned.split(/\r?\n/)){
+    const candidate=line.trim().replace(/^#{1,6}\s*/,'').replace(/^\d+[.)]\s*/,'').replace(/^[٠-٩]+[.)،]\s*/,'').replace(/^\[|\]$/g,'').replace(/[:：]\s*$/,'');
+    const found=SECTION_LABELS[headingKey(candidate)];
+    if(found){section=found;if(!sections[section])sections[section]='';continue;}
+    if(section)sections[section]+=(sections[section]?'\n':'')+line;
+  }
+  for(const key of Object.keys(sections))sections[key]=sections[key].trim();
+  const directPages=parsePageText(sections.storyPages||(!Object.keys(sections).length?cleaned:''));
+  if(!Object.keys(sections).length&&!directPages.length)throw new Error('لم يُعرف تنسيق الرد. استخدم العناوين [الشخصيات] و[الصفحات]، أو استورد JSON صالحًا.');
+  const settings={};for(const [key,value]of Object.entries(sections))if(FIELD_IDS.has(key))settings[key]=value;
+  if(directPages.length)settings.storyPageCount=Math.min(40,directPages.length);
+  const payload={settings};if(directPages.length)payload.pages=directPages;if(sections.quickPrompt)payload.quickPrompt=sections.quickPrompt;
+  const result=normalizeProject(payload,state);
+  if(sections.storyCharacters){const cards=sections.storyCharacters.split('\n').filter(l=>/الاسم\s*[:：]/.test(l)).map(line=>{const c=newCharacter(),map={الاسم:'name',الدور:'role',العمر:'age',الهيئة:'appearance',الوصف:'appearance',الملابس:'outfit',الادوات:'accessories',الكلام:'speech',المرجع:'reference'};for(const part of line.split('|')){const m=part.trim().match(/^([^:：]+)[:：]\s*(.*)$/);if(m&&map[headingKey(m[1])])c[map[headingKey(m[1])]]=m[2].trim();}return c;}).filter(c=>c.name);if(cards.length){result.characters=cards;result.settings.storyCharacters='';}}
+  return result;
+}
+function applyProject(project,message='تم استيراد المشروع'){
+  state=project;renderShell();activateTab(activeTab);$('requestJsonOutput').checked=!!state.requestJsonOutput;updateOutput();if(state.legacyStoryPages&&$('legacyPages'))$('legacyPages').value=state.legacyStoryPages;
+  if(state.settings.autosave)saveProject(true);setStatus(message);toast(message);
+}
+function openAiImport(){
+  showDialog('استيراد رد الذكاء',`<p class="caption">الصق الرد كاملًا: الحاويات، وصفحات القصة، والبرومبت السريع، وJSON إن وجد. راجع المحتوى بعد الاستيراد.</p><textarea id="aiReply" class="import-area" placeholder="[عنوان القصة]&#10;...&#10;[الشخصيات]&#10;...&#10;[الصفحات]&#10;الصفحة ١: ..."></textarea><p id="aiImportError" class="hint" role="alert"></p>`,[
+    {label:'استيراد الرد',primary:true,action:()=>{try{const raw=$('aiReply').value;if(raw.length>5_000_000)throw new Error('الرد كبير جدًا. استورد ملف المشروع بدلًا منه.');const project=parseAiReply(raw);$('appDialog').close();applyProject(project,'تم استيراد الرد إلى الشخصيات والصفحات');}catch(e){$('aiImportError').textContent=e.message;}}},
+    {label:'لصق من الحافظة',action:async()=>{try{$('aiReply').value=await navigator.clipboard.readText();}catch{toast('الصق الرد يدويًا داخل الحقل باستخدام Ctrl+V');$('aiReply').focus();}}},
+    {label:'إلغاء',action:()=>$('appDialog').close()}]);
+}
+async function readFile(file){if(!file)return null;if(file.size>5_000_000)throw new Error('حجم الملف أكبر من الحد المقبول للمشروع.');return JSON.parse(await file.text());}
+function normalizeLibrary(payload){
+  const root=record(payload.templates)?payload.templates:record(payload.libraryTemplates)?payload.libraryTemplates:record(payload.library)?payload.library:payload;
+  if(!record(root))throw new Error('ملف القوالب غير صالح.');
+  const result=Object.create(null);for(const [name,value]of Object.entries(root)){if(!record(value)||!clean(name))continue;try{result[name.slice(0,150)]=normalizeProject(value);}catch{}}
+  if(!Object.keys(result).length)throw new Error('لا توجد قوالب قصص صالحة في الملف.');return result;
+}
+
+const EXAMPLES={
+  farm:{title:'سرّ الحظيرة الفارغة',subject:'رحلة استكشافية إلى المزرعة للتعرف على الحيوانات وفوائدها وأصواتها.',subjectArea:'علوم',gradeLevel:'رياض الأطفال — المستوى الثالث',ageRange:'٥–٦ سنوات',learningGoal:'يسمّي الطفل ستة حيوانات من المزرعة، ويربط كل حيوان بفائدة أو صفة مناسبة.',storyGenre:'قصة استكشافية',interactionMode:'oral',storyTextPlacement:'نص سردي أسفل الصورة',characters:[{name:'سالم',age:'٦ سنوات',role:'طفل مستكشف',appearance:'وجه مستدير، عينان بنيتان، شعر أسود قصير',outfit:'ثوب أبيض وحذاء بني'},{name:'المزارع حمد',role:'مرشد المزرعة',appearance:'رجل سعودي بشوش، لحية قصيرة',outfit:'ثوب بيج وقبعة عمل بنية'}],pages:[
+    ['الباب المفتوح','سالم يقف مع المزارع حمد أمام مزرعة هادئة، ويشاهد حظيرة نظيفة فارغة.','دخل سالم المزرعة، فرأى حظيرة فارغة.','سالم: من يعيش هنا؟','ما الحيوانات التي تتوقع أن تعيش في الحظيرة؟'],
+    ['صوت قريب','بقرة بيضاء ببقع سوداء تظهر قرب الحظيرة، والمزارع يحمل وعاء حليب مغلقًا.','سمع سالم صوت البقرة.','المزارع حمد: تعطينا البقرة الحليب.','قلّد صوت البقرة.'],
+    ['خطوات الحصان','حصان بني يقف خلف سياج آمن، وسالم يراقبه من الخارج إلى جانب المزارع.','اقترب سالم من السياج، ورأى الحصان.','سالم: للحصان أرجل قوية!','كم رجلًا للحصان؟'],
+    ['صوف ناعم','خروف أبيض صوفي وماعز بني قرب السياج، وسالم يتأمل قطعة صوف يعرضها المزارع.','رأى سالم الخروف والماعز.','المزارع حمد: للخروف صوف ناعم، وللماعز شعر.','أي خامة منزلية تشبه الصوف؟'],
+    ['ريش وبيض','دجاجة بجوار عش فيه بيضتان، وبطة قرب بركة صغيرة محاطة بسياج.','شاهد سالم الدجاجة والبطة.','سالم: لهما ريش، لكن صوتهما مختلف.','أي حيوان يقول: بط بط؟'],
+    ['بيت آمن للجميع','الحيوانات الستة في أماكن آمنة منفصلة، مع ماء وعلف وحظيرة واسعة، وسالم والمزارع يبتسمان.','عرف سالم حيوانات المزرعة، وتعلّم أن يرفق بها.','سالم: سأترك لها الماء والطعام، ولن أخيفها.','سمّ الحيوانات التي تعرفت عليها.']
+  ]},
+  math:{title:'نصف التفاحة',subject:'موقف قصصي عن تقسيم الكل إلى نصفين متساويين والتمييز بين الأجزاء المتساوية وغير المتساوية.',subjectArea:'رياضيات',gradeLevel:'الصف الثالث الابتدائي',ageRange:'٨–٩ سنوات',learningGoal:'يميّز المتعلم نصف الكل عندما يقسم إلى جزأين متساويين.',storyGenre:'قصة رياضية',interactionMode:'end',characters:[{name:'ليان',role:'طفلة تتعلّم',age:'٨ سنوات',appearance:'شعر أسود مربوط، عينان بنيتان',outfit:'فستان أخضر وحذاء أبيض'},{name:'الأم',role:'مرشدة',appearance:'ملامح عربية هادئة',outfit:'فستان كحلي'}],pages:[
+    ['تفاحة واحدة','ليان مع أمها عند طاولة عليها تفاحة كاملة وطبق أبيض.','كانت على الطاولة تفاحة واحدة.','ليان: كيف نشاركها بالتساوي؟',''],
+    ['جزآن متساويان','الأم تعرض نصفين متساويين من التفاحة على طبقين متماثلين، دون أداة حادة ظاهرة.','قسمت الأم التفاحة إلى جزأين متساويين.','الأم: كل جزء هو نصف التفاحة.',''],
+    ['مقارنة واضحة','طبقان: الأول فيه دائرتان نصف دائريتين متساويتان تمثلان تفاحة، والثاني فيه جزء كبير وآخر صغير، والمشهد يقارن بصريًا بدقة.','نظرَت ليان إلى الأجزاء المتساوية وغير المتساوية.','ليان: النصفان يجب أن يكونا متساويين.',''],
+    ['جرّب بنفسك','ليان تشير إلى دائرتين، إحداهما مقسومة خطيًا إلى نصفين متساويين والثانية إلى جزأين غير متساويين.','تعلّمت ليان معنى النصف.','', 'أي دائرة قُسمت إلى نصفين متساويين؟']
+  ]},
+  teamwork:{title:'جسر التعاون',subject:'أطفال يحاولون بناء جسر مكعبات ويكتشفون أن تبادل الأدوار والاستماع يساعدانهم.',subjectArea:'عام',gradeLevel:'المرحلة الابتدائية',ageRange:'٧–٩ سنوات',learningGoal:'يذكر الطفل سلوكًا عمليًا للتعاون، ويقترح طريقة لتوزيع الأدوار.',storyGenre:'قصة قيم وسلوك',interactionMode:'oral',characters:[{name:'عمر',role:'يخطط للجسر',appearance:'شعر أسود قصير وعينان بنيتان',outfit:'قميص أزرق وبنطال بيج'},{name:'ناصر',role:'يرتب المكعبات',appearance:'شعر بني قصير',outfit:'قميص أخضر وبنطال كحلي'}],pages:[
+    ['فكرة جديدة','عمر وناصر عند طاولة عليها مكعبات خشبية، ويرسمان جسرًا بسيطًا.','أراد عمر وناصر بناء جسر بالمكعبات.','عمر: لنجرب معًا.',''],
+    ['محاولة أولى','الجسر منخفض وآمن يتفكك على سطح الطاولة، والطفلان يتأملانه دون ضيق.','لم تثبت المكعبات في المحاولة الأولى.','ناصر: ماذا يمكن أن نغيّر؟','ماذا تقترح عليهما؟'],
+    ['أدوار واضحة','عمر يحدد مكان الدعامتين وناصر يرتب المكعبات بحرص.','تبادلا الأفكار، ثم وزّعا الأدوار.','عمر: أنا أحدد الدعامات، وأنت ترتب المكعبات.',''],
+    ['الجسر يثبت','جسر مكعبات متوازن يكتمل على الطاولة، والطفلان ينظران إليه بسرور.','ثبت الجسر بعد المحاولة الجديدة.','ناصر: ساعدنا الاستماع والتعاون.',''],
+    ['ننجح معًا','الطفلان يعرضان الجسر أمام ركن الصف المرتب.','فرح الطفلان بما صنعا معًا.','عمر: لكل واحد منا دور مهم.','كيف تتعاون مع صديقك في نشاط اليوم؟']
+  ]},
+  water:{title:'رحلة قطرة',subject:'تتبّع دورة الماء المبسطة، مع تمييز الشخصية الخيالية عن العملية العلمية الحقيقية.',subjectArea:'علوم',gradeLevel:'المرحلة الابتدائية',ageRange:'٨–١٠ سنوات',learningGoal:'يرتب المتعلم مراحل التبخر والتكاثف والهطول بصورة مبسطة.',storyGenre:'قصة علمية',interactionMode:'end',characters:[{name:'قطرة',role:'شخصية خيالية لشرح رحلة الماء',appearance:'قطرة ماء زرقاء صغيرة ذات وجه كرتوني لطيف',outfit:'بلا ملابس أو إكسسوارات'}],pages:[
+    ['دفء الشمس','بحيرة هادئة وشمس مشرقة؛ القطرة في المقدمة، وأسهم خفيفة تشير إلى تبخر الماء دون تجسيد قطرة سائلة تطير إلى الأعلى.','يسخن الماء، فيتحول جزء منه إلى بخار ماء.','',''],
+    ['سحب في السماء','سحابة تتكون من قطرات ماء صغيرة، مع شخصية قطرة في إطار توضيحي منفصل داخل المشهد.','يبرد بخار الماء، فيتكاثف إلى قطرات صغيرة تكوّن السحب.','',''],
+    ['عودة الماء','مطر خفيف يسقط من السحابة على بحيرة وتربة وأشجار.','حين تكبر القطرات، يهطل الماء من السحب.','',''],
+    ['رحلة مستمرة','رسم علمي مبسط متصل لدورة الماء مع بحيرة وسحب ومطر، وشخصية قطرة في الركن.','يعود الماء إلى الأرض، وتستمر رحلته.','','رتّب: تبخّر، تكاثف، هطول.']
+  ]}
+};
+function exampleProject(key){
+  const item=EXAMPLES[key],project=freshProject();
+  for(const field of ['title','subject','subjectArea','gradeLevel','ageRange','learningGoal','storyGenre','interactionMode','storyTextPlacement'])if(item[field])project.settings[field]=item[field];
+  project.settings.storySourceMode='exact';project.settings.storyPageCount=item.pages.length;project.settings.storyPageSize='A4 عرضي';project.settings.colors='ألوان هادئة ومشرقة، خلفية كريمية، تباين واضح للنص، وثبات الألوان عبر جميع الصفحات.';
+  project.characters=item.characters.map(normalizeCharacter);project.pages=item.pages.map(([title,scene,narrative,dialogue,question])=>normalizePage({title,scene,narrative,dialogue,question}));
+  return project;
+}
+function openExamples(){
+  showDialog('اختر قصة تعليمية للتجربة','<p class="caption">تملأ القصة المختارة الشخصيات والمشاهد والنصوص. يمكنك تعديل كل عنصر بعد ذلك.</p><div class="preset-grid">'+Object.entries(EXAMPLES).map(([key,v])=>`<button class="preset-btn" data-example="${key}">${escapeHtml(v.title)}<span>${escapeHtml(v.learningGoal)}</span></button>`).join('')+'</div>',[{label:'إغلاق',action:()=>$('appDialog').close()}]);
+}
+function openHelp(){
+  showDialog('من فكرة إلى قصة مصوّرة',`<ol class="guide-list"><li>حدّد العنوان والفكرة والعمر والهدف التعليمي. اختر تطوير فكرة، أو الحفاظ على نص مكتوب.</li><li>أضف بطاقات الشخصيات ووصف الملابس والملامح الثابتة. يمكنك استخدام وصف نصي بدل البطاقات.</li><li>انسخ «طلب كتابة القصة» إلى مساعد الذكاء، ثم استخدم «استيراد رد الذكاء» لإدخال الصفحات والشخصيات. راجع النتائج التعليمية واللغوية.</li><li>افتح تبويب «برومبت الصور»، أو اختر «صفحة مستقلة». القصص الطويلة تنفّذ في دفعات حتى ١٠ صور، وكل صفحة صورة مستقلة.</li><li>إذا أردت فقاعات حوار، اكتب اسم المتحدث قبل عبارته. وإذا أردت عدة لقطات في الصفحة فحدّد توزيعها؛ الغلاف لا يدخل ضمن عدد صفحات المحتوى.</li><li>أرفق صور الشخصيات أو الصفحة الأولى المعتمدة مع كل طلب في أداة الصور عند الحاجة. تعليمات الاتساق تساعد الأداة، ولا تعني ضمان تطابق جميع الرسوم.</li><li>نزّل المشروع JSON للاحتفاظ بكل الإعدادات على جهازك. الحفظ في المتصفح والقوالب وسائل إضافية للعودة إلى العمل.</li></ol><div class="note teal">هذا مولّد للنصوص والبرومبتات. يمكنك تشغيله بفتح ملف HTML في المتصفح؛ توليد الصور يتم في الأداة التي تختارها.</div><p class="hint">الإرشادات //...// و[[...]] تُفصل عن النص الظاهر. المصدر المرجعي ليس نصًا يُطبع تلقائيًا. في وضع الصور بلا نص، لن تطبع العناوين أو الترقيم أو التذييل.</p>`,[{label:'فهمت',primary:true,action:()=>$('appDialog').close()}]);
+}
+async function saveTemplate(){
+  showDialog('حفظ القصة كقالب','<label for="templateName">اسم القالب</label><input class="dialog-input" id="templateName" value="'+escapeHtml(state.settings.title||'قالب قصة جديد')+'" maxlength="150">',[
+    {label:'حفظ',primary:true,action:async()=>{const name=clean($('templateName').value);if(!name){toast('اكتب اسم القالب');return;}if(Object.prototype.hasOwnProperty.call(templates,name)){if(!await askConfirm('يوجد قالب بالاسم نفسه. هل تريد استبداله بالمشروع الحالي؟'))return;}templates[name]=clone(state);saveTemplates();$('appDialog').close();renderLibrary();toast('تم حفظ القالب');}},
+    {label:'إلغاء',action:()=>$('appDialog').close()}]);
+}
+function selectedTemplates(){return [...document.querySelectorAll('[data-template-check]:checked')].map(el=>el.value);}
+function exportTemplates(names=Object.keys(templates)){
+  if(!names.length){toast('اختر قالبًا واحدًا على الأقل');return;}
+  const chosen=Object.fromEntries(names.map(n=>[n,templates[n]]));download(JSON.stringify({artifact:'arabic-story-templates',version:1,templates:chosen},null,2),'قوالب_القصص_المصورة.json','application/json;charset=utf-8');
+}
+function allPrompts(){
+  const s=state.settings,parts=[`حزمة برومبتات القصة: ${s.title||'قصة مصوّرة'}`,`صفحات المحتوى: ${num(activePages().length)}`, '', 'طلب كتابة القصة:',buildContentRequest()];
+  if(s.storyCoverMode==='on')parts.push('\n════════ الغلاف الأمامي ════════\n',buildImagePrompt('cover'));
+  activePages().forEach((p,i)=>parts.push('\n════════ الصفحة '+num(i+1)+' ════════\n',buildImagePrompt(i)));
+  if(s.backCoverMode==='on')parts.push('\n════════ الغلاف الخلفي ════════\n',buildImagePrompt('back'));
+  if(state.quickPrompt)parts.push('\nالبرومبت السريع من الرد المستورد — راجعه إذا تغير المشروع:\n',state.quickPrompt);
+  return parts.join('\n\n');
+}
+async function handleClick(event){
+  const b=event.target.closest('button');if(!b||b.disabled)return;
+  if(b.dataset.tab){activateTab(b.dataset.tab);return;}
+  if(b.dataset.output){outputTab=b.dataset.output;updateOutput();return;}
+  if(b.dataset.directive){const el=$(b.dataset.directive),pos=el.selectionStart;el.setRangeText('//إرشاد//',pos,el.selectionEnd,'select');el.focus();state.settings[b.dataset.directive]=el.value;changed();return;}
+  if(b.dataset.example){const key=b.dataset.example;if((state.settings.title||state.settings.subject||activePages().some(p=>p.scene))&&!await askConfirm('سيُستبدل المشروع الحالي بالقصة المختارة. تابع بعد حفظ نسخة إذا احتجت إليها.'))return;applyProject(exampleProject(key),'تم تحميل القصة التعليمية');$('appDialog').close();return;}
+  if(b.dataset.templateLoad){const name=b.dataset.templateLoad;if(!await askConfirm('فتح القالب سيستبدل المشروع الحالي. هل تريد المتابعة؟'))return;applyProject(clone(templates[name]),'تم فتح القالب');return;}
+  if(b.dataset.charDelete!==undefined){const i=Number(b.dataset.charDelete);if(!await askConfirm('حذف بطاقة هذه الشخصية؟ تبقى النصوص المكتوبة في الصفحات كما هي.'))return;state.characters.splice(i,1);renderCharacters();changed();return;}
+  if(b.dataset.pagePrompt!==undefined){outputTab='page';$('pageOutputSelect').value=b.dataset.pagePrompt;updateOutput();if(innerWidth<850)$('outputText').scrollIntoView({behavior:'smooth',block:'center'});return;}
+  if(b.dataset.pageUp!==undefined||b.dataset.pageDown!==undefined){const up=b.dataset.pageUp!==undefined,i=Number(up?b.dataset.pageUp:b.dataset.pageDown),j=i+(up?-1:1);if(j<0||j>=activePages().length)return;[state.pages[i],state.pages[j]]=[state.pages[j],state.pages[i]];renderPages();changed();return;}
+  if(b.dataset.pageCopy!==undefined){if(state.pages.length>=40){toast('الحد الأقصى ٤٠ صفحة محفوظة، بما فيها الصفحات المخفية');return;}const i=Number(b.dataset.pageCopy),copy=clone(state.pages[i]);copy.id=uid();state.pages.splice(i+1,0,copy);state.settings.storyPageCount=activePages().length+1;$('storyPageCount').value=state.settings.storyPageCount;renderPages();changed();return;}
+  if(b.dataset.pageDelete!==undefined){const i=Number(b.dataset.pageDelete);if(!await askConfirm('حذف محتوى هذه الصفحة من المشروع؟'))return;const count=activePages().length;if(count===1)state.pages[0]=newPage();else{state.pages.splice(i,1);state.settings.storyPageCount=count-1;}$('storyPageCount').value=state.settings.storyPageCount;renderPages();changed();return;}
+  switch(b.id){
+    case 'generateBtn':clearTimeout(updateTimer);updateOutput();if(state.settings.autosave)saveProject(true);toast('تم تحديث جميع البرومبتات');break;
+    case 'exampleBtn':openExamples();break;
+    case 'helpBtn':openHelp();break;
+    case 'importAiBtn':openAiImport();break;
+    case 'saveBtn':saveProject();break;
+    case 'exportBtn':download(JSON.stringify(state,null,2),safeFilename(state.settings.title)+'_مشروع.json','application/json;charset=utf-8');toast('تم تجهيز ملف المشروع للتنزيل');break;
+    case 'copyOutputBtn':await copyOutput();break;
+    case 'downloadOutputBtn':download(activeOutput,safeFilename(state.settings.title)+'_'+outputTab+(outputTab==='json'?'.json':'.txt'),outputTab==='json'?'application/json;charset=utf-8':'text/plain;charset=utf-8');break;
+    case 'downloadAllBtn':download(allPrompts(),safeFilename(state.settings.title)+'_كل_البرومبتات.txt');break;
+    case 'addCharacterBtn':if(state.characters.length>=30){toast('الحد الأقصى ٣٠ بطاقة شخصية');break;}state.characters.push(newCharacter());renderCharacters();changed();break;
+    case 'addPageBtn':{const count=activePages().length;if(count>=40)break;if(state.pages.length<=count)state.pages.push(newPage());state.settings.storyPageCount=count+1;$('storyPageCount').value=count+1;renderPages();changed();break;}
+    case 'downloadPlanBtn':download(planText(),safeFilename(state.settings.title)+'_مخطط_القصة.txt');break;
+    case 'parseLegacyBtn':{const raw=$('legacyPages').value,pages=parsePageText(raw);if(!pages.length){toast('لم أجد صفحات مرقمة. استخدم: الصفحة ١: وصف المشهد');break;}if(pages.length>40){toast('الصفحات تتجاوز ٤٠؛ قسّم النص إلى مشاريع أصغر');break;}if(!await askConfirm('استبدال بطاقات الصفحات الحالية بالنص الذي لصقته؟'))break;state.pages=pages;state.settings.storyPageCount=state.pages.length;state.legacyStoryPages=raw;$('storyPageCount').value=state.pages.length;renderPages();changed();toast('تم تحويل النص إلى بطاقات صفحات');break;}
+    case 'newBtn':showDialog('بدء قصة جديدة','<p>اختر طريقة البدء. نزّل المشروع الحالي إذا رغبت في الاحتفاظ بنسخة منه.</p>',[
+      {label:'تفريغ القصة وحفظ الإعدادات',primary:true,action:()=>{const next=freshProject();next.settings=clone(state.settings);for(const id of ['title','subject','learningGoal','lessonTitle','referenceText','sourceCitation','arabicText','secondaryText','storyCharacters','storyCoverSubtitle','coverScene','backCoverText','assessment','footerLessonTopic'])next.settings[id]='';next.pages=Array.from({length:next.settings.storyPageCount},newPage);$('appDialog').close();applyProject(next,'بدأت قصة جديدة بالإعدادات الحالية');}},
+      {label:'بدء بالإعدادات الافتراضية',action:()=>{$('appDialog').close();applyProject(freshProject(),'بدأت قصة جديدة');}},
+      {label:'إلغاء',action:()=>$('appDialog').close()}]);break;
+    case 'saveTemplateBtn':saveTemplate();break;
+    case 'importProjectBtn':$('projectFile').click();break;
+    case 'importLibraryBtn':$('libraryFile').click();break;
+    case 'exportLibraryBtn':exportTemplates();break;
+    case 'exportSelectedBtn':exportTemplates(selectedTemplates());break;
+    case 'deleteSelectedBtn':{const names=selectedTemplates();if(!names.length){toast('اختر القوالب المطلوبة أولًا');break;}if(!await askConfirm('حذف '+englishToEastern(String(names.length))+' من القوالب المحددة؟'))break;for(const name of names)delete templates[name];saveTemplates();renderLibrary();toast('تم حذف القوالب المحددة');break;}
+  }
+}
+function handleInput(event){
+  const el=event.target;
+  if(el.dataset.setting){const id=el.dataset.setting,f=FIELDS.find(x=>x.id===id);state.settings[id]=f.type==='checkbox'?el.checked:f.type==='number'?clampInt(el.value,f.min,f.max,f.default):el.value;
+    if(id==='requireFullTashkeel'){state.settings.tashkeelMode=el.checked?'full':'auto';$('tashkeelMode').value=state.settings.tashkeelMode;}
+    if(id==='tashkeelMode'){state.settings.requireFullTashkeel=el.value==='full';$('requireFullTashkeel').checked=state.settings.requireFullTashkeel;}
+    if(id==='storyPageCount'){while(state.pages.length<state.settings.storyPageCount)state.pages.push(newPage());state.settings.batchStart=clampInt(state.settings.batchStart,1,state.settings.storyPageCount,1);renderPages();}
+    if(id==='numberStyle'){renderCharacters();renderPages();}changed();
+  }else if(el.dataset.charField){const i=Number(el.dataset.char);if(!state.characters[i])return;state.characters[i][el.dataset.charField]=el.value;if(el.dataset.charField==='name')document.querySelector(`[data-char-card="${i}"] .char-title`).textContent=el.value||'شخصية جديدة';changed();
+  }else if(el.dataset.pageField){const i=Number(el.dataset.page);if(!state.pages[i])return;state.pages[i][el.dataset.pageField]=el.value;if(el.dataset.pageField==='title')document.querySelector(`[data-page-card="${i}"] .page-title`).textContent=el.value||'مشهد جديد';changed();
+  }else if(el.id==='requestJsonOutput'){state.requestJsonOutput=el.checked;changed();updateOutput();}else if(el.id==='pageOutputSelect')updateOutput();
+}
+document.addEventListener('click',event=>handleClick(event).catch(error=>{toast('تعذّر تنفيذ الإجراء: '+error.message);setStatus('راجع المدخلات ثم أعد المحاولة');}));
+document.addEventListener('input',handleInput);document.addEventListener('change',handleInput);
+$('editorNav').addEventListener('keydown',event=>{const tabs=[...document.querySelectorAll('[data-tab]')],index=tabs.indexOf(event.target);if(index<0)return;let next=index;if(event.key==='ArrowLeft')next=(index+1)%tabs.length;else if(event.key==='ArrowRight')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();activateTab(tabs[next].dataset.tab,true);});
+$('appDialog').addEventListener('cancel',()=>{if(dialogResolve){const resolve=dialogResolve;dialogResolve=null;resolve(false);}});
+$('projectFile').addEventListener('change',async event=>{try{const payload=await readFile(event.target.files[0]);if(!payload)return;const project=normalizeProject(payload);if(await askConfirm('استيراد الملف سيستبدل المشروع الحالي. هل تريد المتابعة؟'))applyProject(project);}catch(error){toast(error.message);}finally{event.target.value='';}});
+$('libraryFile').addEventListener('change',async event=>{try{const payload=await readFile(event.target.files[0]);if(!payload)return;const incoming=normalizeLibrary(payload);let added=0,skipped=0;for(const [name,p]of Object.entries(incoming)){if(Object.prototype.hasOwnProperty.call(templates,name)&&JSON.stringify(templates[name])===JSON.stringify(p)){skipped++;continue;}let target=name,n=2;while(Object.prototype.hasOwnProperty.call(templates,target)){target=name+' ('+englishToEastern(String(n++))+')';}templates[target]=p;added++;}saveTemplates();renderLibrary();toast('تم استيراد '+englishToEastern(String(added))+' قوالب'+(skipped?' وتجاوز '+englishToEastern(String(skipped))+' مكررة':''));}catch(error){toast(error.message);}finally{event.target.value='';}});
+try{const raw=localStorage.getItem(STORAGE_KEY);if(raw)state=normalizeProject(JSON.parse(raw));}catch{setStatus('يمكنك بدء قصة جديدة أو استيراد مشروع محفوظ');}
+try{const raw=localStorage.getItem(LIBRARY_KEY);if(raw)templates=normalizeLibrary(JSON.parse(raw));}catch{templates=Object.create(null);}
+// A public namespace makes the standalone generator reusable in another educational project.
+window.Hikaya={version:APP_VERSION,getProject:()=>clone(state),importProject:payload=>applyProject(normalizeProject(payload)),importReply:raw=>applyProject(parseAiReply(raw)),buildPrompt:selection=>buildImagePrompt(selection===undefined?null:selection),buildContentRequest,buildNegativePrompt,parsePageText};
+renderShell();activateTab(activeTab);$('requestJsonOutput').checked=!!state.requestJsonOutput;updateOutput();
+
+</script>
+</body></html>
